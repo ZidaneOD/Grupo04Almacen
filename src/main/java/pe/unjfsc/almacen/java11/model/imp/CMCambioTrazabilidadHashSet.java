@@ -46,7 +46,6 @@ public class CMCambioTrazabilidadHashSet implements CICambioTrazabilidad {
             if (oTrazabilidad.getCodiTraz().equals(pId)) {
                 LOG.info("[FSI] Objeto modificado : {}", oTrazabilidad);
                 oTrazabilidad.setNombTraz(nombCate);
-
                 break;
             }
         }

@@ -16,7 +16,7 @@ public class CMCambioUbicacionHashSet implements CICambioUbicacion {
     private CEUbicacionAlmacen oUbicacion;
 
     public CMCambioUbicacionHashSet() {
-        LOG.info("FSI] Start CMCambioCategoriaHashSet before crear la instancia : ()", oHsData);
+        LOG.info("FSI] Start CMCambioUbicacionHashSet before crear la instancia : ()", oHsData);
         oHsData = new HashSet<>();
 
         LOG.info("[FSI] Count del HashSet :", oHsData.isEmpty());
@@ -29,14 +29,14 @@ public class CMCambioUbicacionHashSet implements CICambioUbicacion {
 
     @Override
     public void saveUbicacionCIC(CEUbicacionAlmacen poData) {
-        LOG.info("[FSI] Start saveCategoriaCIC : ", poData);
+        LOG.info("[FSI] Start saveUbicacionCIC : ", poData);
         oHsData.add(new CEUbicacionAlmacen(poData.getCodiUbic(), poData.getNombUbic(), poData.getDirecUbic()));
 
     }
 
     @Override
-    public void modificarUbicacionCIC(String pId, String nombCate) {
-        LOG.info("[FSI] Start modificarCategoriaCIC : {}", pId);
+    public void modificarUbicacionCIC(String pId, String nomb, String dire) {
+        LOG.info("[FSI] Start modificarUbicacionCIC : {}", pId);
         Iterator<CEUbicacionAlmacen> oIt = oHsData.iterator();
         while (oIt.hasNext()) {
             oUbicacion = new CEUbicacionAlmacen();
@@ -45,21 +45,34 @@ public class CMCambioUbicacionHashSet implements CICambioUbicacion {
 
             if (oUbicacion.getCodiUbic().equals(pId)) {
                 LOG.info("[FSI] Objeto modificado : {}", oUbicacion);
-                oUbicacion.setNombUbic(nombCate);
-                
-
+                oUbicacion.setNombUbic(nomb);
+                oUbicacion.setNombUbic(dire);
                 break;
             }
         }
     }
 
     @Override
-    public void eliminarUbicacionCIC(String poData) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void eliminarUbicacionCIC(String pId) {
+        LOG.info("[FSI] Start eliminarUbicacionCIC : {}", pId);
+        Iterator<CEUbicacionAlmacen> oIt = oHsData.iterator();
+        while (oIt.hasNext()) {
+            oUbicacion = new CEUbicacionAlmacen();
+            oUbicacion = oIt.next();
+            LOG.info("[FSI] Objeto asignado : {}", oUbicacion);
+
+            if (oUbicacion.getCodiUbic().equals(pId)) {
+                LOG.info("[FSI] Objeto Elimnado : {}", oUbicacion);
+                oHsData.remove(oUbicacion);
+                break;
+            }
+        }
     }
 
     @Override
     public HashSet<CEUbicacionAlmacen> consultAllUbicacionCIC() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        LOG.info("[FSI] Start consultAllUbicacionCIC : {}", oHsData.size());
+        LOG.info(String.valueOf(oHsData));
+        return oHsData;
     }
 }

@@ -7,7 +7,7 @@ public interface CICambioUbicacion {
 
     public void saveUbicacionCIC(CEUbicacionAlmacen poData);
 
-    public void modificarUbicacionCIC(String pId, String nombCate);
+    public void modificarUbicacionCIC(String pId, String nomb, String ubic);
 
     public void eliminarUbicacionCIC(String poData);
 

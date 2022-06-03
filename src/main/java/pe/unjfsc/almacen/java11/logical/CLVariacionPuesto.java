@@ -1,17 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package pe.unjfsc.almacen.java11.logical;
 
 import java.util.HashSet;
 
 import pe.unjfsc.almacen.java11.entity.CEPuesto;
 
-/**
- *
- * @author Freddy
- */
 public class CLVariacionPuesto {
       public Object[][] convertHashSetArray(HashSet<CEPuesto> poHsData) {
 

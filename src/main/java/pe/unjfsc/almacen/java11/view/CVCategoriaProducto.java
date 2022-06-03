@@ -28,7 +28,7 @@ public class CVCategoriaProducto {
         oCrud.eliminarCategoriaCIC(a);
         LOG.info("[FSI] Creando objeto de collection : {}", oCrud.consultAllCategoriaCIC());;
     }
-     public void mdoficar(String a, String b) {
+     public void modificar(String a, String b) {
         CICambioCategoria oCrud = new CMCambioCategoriaHashSet();
         LOG.info("[FSI] Creado objeto de collection : {} ", oCrud);
         oCrud.modificarCategoriaCIC(a,b);
@@ -45,7 +45,7 @@ public class CVCategoriaProducto {
 
         //tmp.agregar(codi, nomb);
         //tmp.elimnar(codi);
-        tmp.mdoficar(nomb, nomb);
+        tmp.modificar(codi, nomb);
         /*CICambioCategoria oCrud = new CMCambioCategoriaHashSet();
         oCrud.consultAllCategoriaCIC();*/
     }

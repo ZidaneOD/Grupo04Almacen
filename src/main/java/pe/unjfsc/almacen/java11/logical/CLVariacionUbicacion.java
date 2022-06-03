@@ -7,7 +7,7 @@ public class CLVariacionUbicacion {
 
     public Object[][] convertHashSetArray(HashSet<CEUbicacionAlmacen> poHsData) {
 
-        String[][] aDataResponse = new String[poHsData.size()][2];
+        String[][] aDataResponse = new String[poHsData.size()][3];
         int iRow = 0;
         for (CEUbicacionAlmacen oItem : poHsData) {
             aDataResponse[iRow][0] = oItem.getCodiUbic();
