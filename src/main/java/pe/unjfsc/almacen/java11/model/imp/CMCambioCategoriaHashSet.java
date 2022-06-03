@@ -24,12 +24,14 @@ public class CMCambioCategoriaHashSet implements CICambioCategoria {
         oHsData.add(new CECategoriaProducto("CA02", "Helado"));
         oHsData.add(new CECategoriaProducto("CA03", "Maquinaria"));
         LOG.info("[FSI] After - Count del HashSet : {}", oHsData.size());
+    
     }
 
     @Override
     public void saveCategoriaCIC(CECategoriaProducto poData) {
         LOG.info("[FSI] Start saveCategoriaCIC : ", poData);
         oHsData.add(new CECategoriaProducto(poData.getCodiCate(), poData.getNombCate()));
+    
     }
 
     @Override
@@ -43,11 +45,7 @@ public class CMCambioCategoriaHashSet implements CICambioCategoria {
 
             if (oCategoria.getCodiCate().equals(pId)) {
                 LOG.info("[FSI] Objeto modificado : {}", oCategoria);
-                oHsData.remove(oCategoria);
-
-                CECategoriaProducto tmp = new CECategoriaProducto(nombCate, nombCate);
-
-                oHsData.add(tmp);
+                oCategoria.setCodiCate(nombCate);
                 break;
             }
         }
@@ -73,6 +71,7 @@ public class CMCambioCategoriaHashSet implements CICambioCategoria {
     @Override
     public HashSet<CECategoriaProducto> consultAllCategoriaCIC() {
         LOG.info("[FSI] Start consultAllCategoriaCIC : {}", oHsData.size());
+        LOG.info(String.valueOf(oHsData));
         return oHsData;
     }
 

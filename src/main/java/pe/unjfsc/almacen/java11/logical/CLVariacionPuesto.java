@@ -5,10 +5,6 @@ import java.util.HashSet;
 
 import pe.unjfsc.almacen.java11.entity.CEPuesto;
 
-/**
- *
- * @author Freddy
- */
 public class CLVariacionPuesto {
       public Object[][] convertHashSetArray(HashSet<CEPuesto> poHsData) {
 
