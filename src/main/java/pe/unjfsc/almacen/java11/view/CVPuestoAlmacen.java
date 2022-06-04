@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import pe.unjfsc.almacen.java11.entity.CEPuestoAlmacen;
 import pe.unjfsc.almacen.java11.model.CICambioPuesto;
 import pe.unjfsc.almacen.java11.model.imp.CMCambiarPuestoHashSet;
-import pe.unjfsc.almacen.java11.model.imp.CMCambioDProductoHashSet;
 
 public class CVPuestoAlmacen {
 
