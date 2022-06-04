@@ -3,18 +3,14 @@ package pe.unjfsc.almacen.java11.model;
 
 import java.util.HashSet;
 
-import pe.unjfsc.almacen.java11.entity.CEPuesto;
+import pe.unjfsc.almacen.java11.entity.CEPuestoAlmacen;
 
-/**
- *
- * @author Freddy
- */
 public interface CICambioPuesto {
-    public void saveCategoriaCIC(CEPuesto poData);
+    public void savePuestoCIC(CEPuestoAlmacen poData);
 
-    public void modificarCategoriaCIC(String pId, String nombCate);
+    public void modificarPuestoCIC(String pId, String nombPues);
 
-    public void eliminarCategoriaCIC(String poData);
+    public void eliminarPuestoCIC(String poData);
 
-    public HashSet<CEPuesto> consultAllCategoriaCIC();
+    public HashSet<CEPuestoAlmacen> consultAllPuestoCIC();
 }

@@ -1,60 +1,52 @@
-
 package pe.unjfsc.almacen.java11.model.imp;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CEPuesto;
+import pe.unjfsc.almacen.java11.entity.CEPuestoAlmacen;
 import pe.unjfsc.almacen.java11.model.CICambioPuesto;
 
-/**
- *
- * @author Freddy
- */
-public class CMCambiarPuestoHashSet implements CICambioPuesto{
+public class CMCambiarPuestoHashSet implements CICambioPuesto {
 
-    
-    
-        private static final Logger LOG = LoggerFactory.getLogger(CMCambioCategoriaHashSet.class);
+    private static final Logger LOG = LoggerFactory.getLogger(CMCambiarPuestoHashSet.class);
 
-    private HashSet<CEPuesto> oHsData;
+    private HashSet<CEPuestoAlmacen> oHsData;
 
-    private CEPuesto oCategoria;
+    private CEPuestoAlmacen oPuesto;
 
     public CMCambiarPuestoHashSet() {
         LOG.info("FSI] Start CMCambiarPuesto before crear la instancia : ()", oHsData);
         oHsData = new HashSet<>();
 
         LOG.info("[FSI] Count del HashSet :", oHsData.isEmpty());
-        oHsData.add(new CEPuesto("CA01", "Insumo"));
-        oHsData.add(new CEPuesto("CA02", "Helado"));
-        oHsData.add(new CEPuesto("CA03", "Maquinaria"));
+        oHsData.add(new CEPuestoAlmacen("PU01", "Jefe Almacen"));
+        oHsData.add(new CEPuestoAlmacen("PU02", "Despachador"));
+        oHsData.add(new CEPuestoAlmacen("PU03", "Almacenero"));
         LOG.info("[FSI] After - Count del HashSet : {}", oHsData.size());
     }
-    
-    
-    @Override
-    public void saveCategoriaCIC(CEPuesto poData) {
 
-        LOG.info("[FSI] Start saveCategoriaCIC : ", poData);
-        oHsData.add(new CEPuesto(poData.getCodiPues(), poData.getNombPues()));
+    @Override
+    public void savePuestoCIC(CEPuestoAlmacen poData) {
+
+        LOG.info("[FSI] Start savePuestoCIC: ", poData);
+        oHsData.add(new CEPuestoAlmacen(poData.getCodiPues(), poData.getNombPues()));
     }
 
     @Override
-    public void modificarCategoriaCIC(String pId, String nombCate) {
-         LOG.info("[FSI] Start modificarCategoriaCIC : {}", pId);
-        Iterator<CEPuesto> oIt = oHsData.iterator();
+    public void modificarPuestoCIC(String pId, String nombCate) {
+        LOG.info("[FSI] Start modificarPuestoCIC : {}", pId);
+        Iterator<CEPuestoAlmacen> oIt = oHsData.iterator();
         while (oIt.hasNext()) {
-            oCategoria = new CEPuesto();
-            oCategoria = oIt.next();
-            LOG.info("[FSI] Objeto asignado : {}", oCategoria);
+            oPuesto = new CEPuestoAlmacen();
+            oPuesto = oIt.next();
+            LOG.info("[FSI] Objeto asignado : {}", oPuesto);
 
-            if (oCategoria.getCodiPues().equals(pId)) {
-                LOG.info("[FSI] Objeto modificado : {}", oCategoria);
-                oHsData.remove(oCategoria);
+            if (oPuesto.getCodiPues().equals(pId)) {
+                LOG.info("[FSI] Objeto modificado : {}", oPuesto);
+                oHsData.remove(oPuesto);
 
-                CEPuesto tmp = new CEPuesto(nombCate, nombCate);
+                CEPuestoAlmacen tmp = new CEPuestoAlmacen(nombCate, nombCate);
 
                 oHsData.add(tmp);
                 break;
@@ -64,17 +56,17 @@ public class CMCambiarPuestoHashSet implements CICambioPuesto{
     }
 
     @Override
-    public void eliminarCategoriaCIC(String pId) {
-        LOG.info("[FSI] Start eliminarCategoriaCIC : {}", pId);
-        Iterator<CEPuesto> oIt = oHsData.iterator();
+    public void eliminarPuestoCIC(String pId) {
+        LOG.info("[FSI] Start eliminarPuestoCIC : {}", pId);
+        Iterator<CEPuestoAlmacen> oIt = oHsData.iterator();
         while (oIt.hasNext()) {
-            oCategoria = new CEPuesto();
-            oCategoria = oIt.next();
-            LOG.info("[FSI] Objeto asignado : {}", oCategoria);
+            oPuesto = new CEPuestoAlmacen();
+            oPuesto = oIt.next();
+            LOG.info("[FSI] Objeto asignado : {}", oPuesto);
 
-            if (oCategoria.getCodiPues().equals(pId)) {
-                LOG.info("[FSI] Objeto Elimnado : {}", oCategoria);
-                oHsData.remove(oCategoria);
+            if (oPuesto.getCodiPues().equals(pId)) {
+                LOG.info("[FSI] Objeto Elimnado : {}", oPuesto);
+                oHsData.remove(oPuesto);
                 break;
             }
         }
@@ -82,10 +74,10 @@ public class CMCambiarPuestoHashSet implements CICambioPuesto{
     }
 
     @Override
-    public HashSet<CEPuesto> consultAllCategoriaCIC() {
+    public HashSet<CEPuestoAlmacen> consultAllPuestoCIC() {
 
-         LOG.info("[FSI] Start consultAllCategoriaCIC : {}", oHsData.size());
+        LOG.info("[FSI] Start consultAllPuestoCIC : {}", oHsData.size());
         return oHsData;
     }
-    
+
 }

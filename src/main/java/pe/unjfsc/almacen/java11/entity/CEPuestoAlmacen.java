@@ -1,22 +1,17 @@
 package pe.unjfsc.almacen.java11.entity;
 
-/**
- *
- * @author Freddy
- */
-public class CEPuesto {
+public class CEPuestoAlmacen {
 
     String codiPues;
     String nombPues;
 
-    public CEPuesto(String codiPues, String nombPues) {
+    public CEPuestoAlmacen(String codiPues, String nombPues) {
         this.codiPues = codiPues;
         this.nombPues = nombPues;
     }
 
-    public CEPuesto() {
+    public CEPuestoAlmacen() {
     }
-    
     
 
     public String getCodiPues() {
@@ -34,4 +29,11 @@ public class CEPuesto {
     public void setNombPues(String nombPues) {
         this.nombPues = nombPues;
     }
+
+    @Override
+    public String toString() {
+        return "CEPuestoAlmacen{" + "codiPues=" + codiPues + ", nombPues=" + nombPues + '}';
+    }
+    
+    
 }
