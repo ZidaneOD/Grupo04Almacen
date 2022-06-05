@@ -45,7 +45,7 @@ public class CMCambioCategoriaHashSet implements CICambioCategoria {
 
             if (oCategoria.getCodiCate().equals(pId)) {
                 LOG.info("[FSI] Objeto modificado : {}", oCategoria);
-                oCategoria.setCodiCate(nombCate);
+                oCategoria.setNombCate(nombCate);
                 break;
             }
         }

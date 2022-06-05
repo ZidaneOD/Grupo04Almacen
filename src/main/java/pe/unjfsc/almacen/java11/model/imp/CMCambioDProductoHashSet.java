@@ -1,6 +1,5 @@
 package pe.unjfsc.almacen.java11.model.imp;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import org.slf4j.Logger;
@@ -21,8 +20,8 @@ public class CMCambioDProductoHashSet implements CICambioDProducto {
         oHsData = new HashSet<>();
         LOG.info("[FSI] Count del HashSet :", oHsData.isEmpty());
         oHsData.add(new CEDetalleProducto("C0001", "Leche", "Descremada", "CA01", 12, 15, "UN10", "11/09/2022", "UB01", "T001", 39, 52, "EM01"));
-        oHsData.add(new CEDetalleProducto("C0001", "Turbo", "D'Nofrio", "CA02", 102, 2.10, "UN11", "10/10/2024", "UB02", "T002", 25, 120, "EM02"));
-        oHsData.add(new CEDetalleProducto("C0001", "Monta carga", "Caterpillar", "CA03", 3, 600, "UN12", "08/02/2025", "UB03", "T004", 95, 96, "EM03"));
+        oHsData.add(new CEDetalleProducto("C0002", "Turbo", "D'Nofrio", "CA02", 102, 2.10, "UN11", "10/10/2024", "UB02", "T002", 25, 120, "EM02"));
+        oHsData.add(new CEDetalleProducto("C0003", "Monta carga", "Caterpillar", "CA03", 3, 600, "UN12", "08/02/2025", "UB03", "T004", 95, 96, "EM03"));
         LOG.info("[FSI] After - Count del HashSet : {}", oHsData.size());
 
     }
@@ -46,6 +45,22 @@ public class CMCambioDProductoHashSet implements CICambioDProducto {
             if (oDProducto.getSkuProd().equals(skuProd)) {
                 LOG.info("[FSI] Objeto modificado : {}", oDProducto);
                 oDProducto.setNombProd(nombProd);
+                oDProducto.setDescProd(descProd);
+
+                oDProducto.setCateProd(cateProd);
+                oDProducto.setStocProd(stocProd);
+                oDProducto.setPrecProd(precProd);
+
+                oDProducto.setUnidProd(unidProd);
+                oDProducto.setCaduProd(caduProd);
+                oDProducto.setUbicProd(ubicProd);
+
+                oDProducto.setTrazProd(trazProd);
+                oDProducto.setEntrPord(entrPord);
+                oDProducto.setSaliProd(saliProd);
+
+                oDProducto.setCodiEmpl(codiEmpl);
+
                 break;
             }
         }

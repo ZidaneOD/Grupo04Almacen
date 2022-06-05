@@ -46,7 +46,7 @@ public class CMCambioUbicacionHashSet implements CICambioUbicacion {
             if (oUbicacion.getCodiUbic().equals(pId)) {
                 LOG.info("[FSI] Objeto modificado : {}", oUbicacion);
                 oUbicacion.setNombUbic(nomb);
-                oUbicacion.setNombUbic(dire);
+                oUbicacion.setDirecUbic(dire);
                 break;
             }
         }
