@@ -44,11 +44,8 @@ public class CMCambiarPuestoHashSet implements CICambioPuesto {
 
             if (oPuesto.getCodiPues().equals(pId)) {
                 LOG.info("[FSI] Objeto modificado : {}", oPuesto);
-                oHsData.remove(oPuesto);
+                oPuesto.setNombPues(nombCate);
 
-                CEPuestoAlmacen tmp = new CEPuestoAlmacen(nombCate, nombCate);
-
-                oHsData.add(tmp);
                 break;
             }
         }
