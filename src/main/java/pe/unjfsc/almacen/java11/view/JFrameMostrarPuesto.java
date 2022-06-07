@@ -110,7 +110,7 @@ public class JFrameMostrarPuesto extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Corbel", 0, 14)); // NOI18N
-        jLabel2.setText("NOMBRE:");
+        jLabel2.setText("PUESTO:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 110, 130, 30));
 
         txtNombre.setBorder(null);

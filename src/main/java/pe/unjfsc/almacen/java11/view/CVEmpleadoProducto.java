@@ -8,7 +8,7 @@ import pe.unjfsc.almacen.java11.model.imp.CMCambiarEmpleadoHashSet;
 
 public class CVEmpleadoProducto {
 
-    private static final Logger LOG = LoggerFactory.getLogger(CVTrazabilidadProducto.class);
+    private static final Logger LOG = LoggerFactory.getLogger(CVEmpleadoProducto.class);
 
     public void agregar(String pId, String nomEmp,String apaEmp,String amaEmp,String dniEmp,String telfEmp) {
         CICambioEmpleado oCrud = new CMCambiarEmpleadoHashSet();

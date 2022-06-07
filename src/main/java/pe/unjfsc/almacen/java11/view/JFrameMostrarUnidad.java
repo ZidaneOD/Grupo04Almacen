@@ -139,7 +139,7 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 90, 30));
 
         jLabel2.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        jLabel2.setText("NOMBRE:");
+        jLabel2.setText("UNIDAD:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 90, 30));
 
         txtCodigo.setBorder(null);

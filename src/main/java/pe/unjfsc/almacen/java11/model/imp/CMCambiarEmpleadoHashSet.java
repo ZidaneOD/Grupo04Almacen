@@ -50,6 +50,10 @@ public class CMCambiarEmpleadoHashSet  implements CICambioEmpleado{
             if (oEmpleado.getCodiEmp().equals(pId)) {
                 LOG.info("[FSI] Objeto modificado : {}", oEmpleado);
                 oEmpleado.setNombEmp(nomEmp);
+                oEmpleado.setApaEmp(apaEmp);
+                oEmpleado.setAmaEmp(amaEmp);
+                oEmpleado.setDniEmp(dniEmp);
+                oEmpleado.setTelfEmp(telfEmp);
                 break;
             }
         }
