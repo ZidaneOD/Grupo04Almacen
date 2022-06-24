@@ -98,7 +98,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
 
         btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/aceptar.png"))); // NOI18N
+        btnNuevo.setIcon(new javax.swing.ImageIcon("C:\\Users\\tatia\\Desktop\\Quinto Ciclo\\Fundamentos de Sistemas de Información\\proyecto ejecucion\\Grupo04Almacen\\src\\main\\java\\img\\aceptar.png")); // NOI18N
         btnNuevo.setText("NUEVO");
         btnNuevo.setContentAreaFilled(false);
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +110,6 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
 
         btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBorrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Freddy\\Documents\\unjfsFSI\\Grupo04Almacen\\src\\main\\resources\\img\\aceptar.png")); // NOI18N
         btnBorrar.setText("BORRAR");
         btnBorrar.setContentAreaFilled(false);
         btnBorrar.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +121,6 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
 
         btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
         btnEditar.setText("EDITAR");
         btnEditar.setContentAreaFilled(false);
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -431,7 +429,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
     private javax.swing.JButton btnCancelar;
     public javax.swing.JButton btnEditar;
     private javax.swing.JButton btnGrabar;
-    public javax.swing.JButton btnNuevo;
+    private javax.swing.JButton btnNuevo;
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

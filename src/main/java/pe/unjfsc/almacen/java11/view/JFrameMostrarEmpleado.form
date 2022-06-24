@@ -71,7 +71,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/aceptar.png"/>
+              <Image iconType="2" name="C:\Users\tatia\Desktop\Quinto Ciclo\Fundamentos de Sistemas de Informaci&#xf3;n\proyecto ejecucion\Grupo04Almacen\src\main\java\img\aceptar.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="NUEVO"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -79,9 +79,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNuevoActionPerformed"/>
           </Events>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="140" width="200" height="70"/>
@@ -95,9 +92,6 @@
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Freddy\Documents\unjfsFSI\Grupo04Almacen\src\main\resources\img\aceptar.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="BORRAR"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -118,9 +112,6 @@
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/img/borrar.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="EDITAR"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
