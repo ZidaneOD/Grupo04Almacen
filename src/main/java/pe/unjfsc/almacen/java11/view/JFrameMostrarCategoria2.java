@@ -11,7 +11,7 @@ import pe.unjfsc.almacen.java11.logical.CLVariacionCategoria;
 import pe.unjfsc.almacen.java11.model.CICambioCategoria;
 import pe.unjfsc.almacen.java11.model.imp.CMCambioCategoriaHashSet;
 
-public class JFrameMostrarCategoria extends javax.swing.JFrame {
+public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
 
     private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarCategoria");
 
@@ -21,16 +21,17 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
     CMCambioCategoriaHashSet oCMCategoria;
     boolean sw;
 
-    public JFrameMostrarCategoria() {
+    public JFrameMostrarCategoria2() {
         oCMCategoria = new CMCambioCategoriaHashSet();
         oCategoria = new CECategoriaProducto();
 
         initComponents();
+        setSize(619, 513);
+        setVisible(true);
         String[] aTitulo = {"CODIGO", "NOMBRE C"};
         DefaultTableModel oModel = new DefaultTableModel(loadData(), aTitulo);
 
         tblMostrar.setModel(oModel);
-
     }
 
     private Object[][] loadData() {
@@ -38,6 +39,7 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
         oHsData = oCICategoria.consultAllCategoriaCIC();
 
         CLVariacionCategoria oLogicalCategoria = new CLVariacionCategoria();
+
         return oLogicalCategoria.convertHashSetArray(oHsData);
     }
 
@@ -65,10 +67,6 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblMostrar = new javax.swing.JTable();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(238, 238, 238));
-        setUndecorated(true);
 
         jPanel3.setBackground(new java.awt.Color(58, 78, 121));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -229,7 +227,7 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
@@ -250,9 +248,9 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 10, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,28 +258,21 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+                .addContainerGap())
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCodigoActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        LOG.info("[FSI] Star boton Cancelar : ");
-        habilitaControles(false);
-        limpiarControles();
-    }//GEN-LAST:event_btnCancelarActionPerformed
+    private void btnNuevoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoMouseEntered
+        btnNuevo.setBackground(Color.red);
+    }//GEN-LAST:event_btnNuevoMouseEntered
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         LOG.info("[FSI] Star boton Nuevo : ");
@@ -289,14 +280,6 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
         limpiarControles();
         sw = true;
     }//GEN-LAST:event_btnNuevoActionPerformed
-
-    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        LOG.info("[FSI] Star boton salir : ");
-        int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea salir?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if (op == JOptionPane.YES_OPTION) {
-            dispose();
-        }
-    }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
         LOG.info("[FSI] Star boton Grabar : {}");
@@ -321,7 +304,6 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
         }
         habilitaControles(false);
         limpiarControles();
-
     }//GEN-LAST:event_btnGrabarActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
@@ -343,16 +325,7 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, e);
         }
 
-
     }//GEN-LAST:event_btnBorrarActionPerformed
-
-    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
-
-        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
-        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
-
-
-    }//GEN-LAST:event_tblMostrarMouseClicked
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         LOG.info("[FSI] Star boton Editar : {}");
@@ -360,43 +333,31 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
         sw = false;
     }//GEN-LAST:event_btnEditarActionPerformed
 
-    private void btnNuevoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevoMouseEntered
-        btnNuevo.setBackground(Color.red);
-    }//GEN-LAST:event_btnNuevoMouseEntered
+    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCodigoActionPerformed
 
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarCategoria.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        LOG.info("[FSI] Star boton Cancelar : ");
+        habilitaControles(false);
+        limpiarControles();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        LOG.info("[FSI] Star boton salir : ");
+        int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea salir?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (op == JOptionPane.YES_OPTION) {
+            dispose();
         }
-        //</editor-fold>
+    }//GEN-LAST:event_btnSalirActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new JFrameMostrarCategoria().setVisible(true);
+    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
 
-            }
-        });
+        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
+        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
 
-    }
+    }//GEN-LAST:event_tblMostrarMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrar;
@@ -420,8 +381,7 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
-
-    private void habilitaControles(boolean b) {
+private void habilitaControles(boolean b) {
         txtCodigo.setEditable(b);
         txtNombre.setEditable(b);
 

@@ -11,7 +11,7 @@ import pe.unjfsc.almacen.java11.logical.CLVariacionDProducto;
 import pe.unjfsc.almacen.java11.model.CICambioDProducto;
 import pe.unjfsc.almacen.java11.model.imp.CMCambioDProductoHashSet;
 
-public class JFrameMostrarDProducto extends javax.swing.JFrame {
+public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
 
     private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarDProducto");
 
@@ -21,10 +21,14 @@ public class JFrameMostrarDProducto extends javax.swing.JFrame {
     CMCambioDProductoHashSet oCMProducto;
     boolean sw;
 
-    public JFrameMostrarDProducto() {
+    public JFrameMostrarDProducto2() {
         oCMProducto = new CMCambioDProductoHashSet();
         oProducto = new CEDetalleProducto();
         initComponents();
+        
+         setSize(855, 695);
+        setVisible(true);
+        
         String[] aTitulo = {"SKU", "PRODUCTO", "DESCRIPCIÓN", "CATEGORIA", "STOCK", "PRECIO", "UNIDAD", "F. CADUCIDAD", "UBICACIÓN", "ESTADO", "ENTRADA", "SALIDA", "EMPLEADO"};
         DefaultTableModel oModel = new DefaultTableModel(loadData(), aTitulo);
 
@@ -43,7 +47,10 @@ public class JFrameMostrarDProducto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel10 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        btnNuevo = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         txtCodigo = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
@@ -85,20 +92,50 @@ public class JFrameMostrarDProducto extends javax.swing.JFrame {
         jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        btnNuevo = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
-        btnBorrar = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblMostrar = new javax.swing.JTable();
         jPanel6 = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
 
-        jLabel10.setText("jLabel10");
+        jPanel3.setBackground(new java.awt.Color(58, 78, 121));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setText("NUEVO");
+        btnNuevo.setBorder(null);
+        btnNuevo.setContentAreaFilled(false);
+        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 190, 60));
+
+        btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setText("EDITAR");
+        btnEditar.setBorder(null);
+        btnEditar.setContentAreaFilled(false);
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 190, 60));
+
+        btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setText("BORRAR");
+        btnBorrar.setBorder(null);
+        btnBorrar.setContentAreaFilled(false);
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 190, 60));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -312,45 +349,6 @@ public class JFrameMostrarDProducto extends javax.swing.JFrame {
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 620, 30));
 
-        jPanel3.setBackground(new java.awt.Color(58, 78, 121));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNuevo.setText("NUEVO");
-        btnNuevo.setBorder(null);
-        btnNuevo.setContentAreaFilled(false);
-        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNuevoActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 190, 60));
-
-        btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnEditar.setForeground(new java.awt.Color(255, 255, 255));
-        btnEditar.setText("EDITAR");
-        btnEditar.setBorder(null);
-        btnEditar.setContentAreaFilled(false);
-        btnEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 190, 60));
-
-        btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBorrar.setText("BORRAR");
-        btnBorrar.setBorder(null);
-        btnBorrar.setContentAreaFilled(false);
-        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBorrarActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 190, 60));
-
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
         tblMostrar.setModel(new javax.swing.table.DefaultTableModel(
@@ -405,55 +403,35 @@ public class JFrameMostrarDProducto extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(6, 6, 6)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
-
-    }//GEN-LAST:event_txtCodigoActionPerformed
-
-    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
-
-        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
-        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
-        txtDesc.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 2).toString());
-        cmbCategoria.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 3).toString());
-        txtStock.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 4).toString());
-        txtPrecio.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 5).toString());
-        cmbUnidad.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 6).toString());
-        txtCaducidad.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 7).toString());
-        cmbUbic.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 8).toString());
-        cmbTrazabilidad.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 9).toString());
-        txtEntrada.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 10).toString());
-        txtSalida.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 11).toString());
-        txtEmpleado.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 12).toString());
-    }//GEN-LAST:event_tblMostrarMouseClicked
+    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
+        LOG.info("[FSI] Star boton Nuevo : ");
+        habilitaControles(true);
+        limpiarControles();
+        sw = true;
+    }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         LOG.info("[FSI] Star boton Editar : {}");
@@ -481,12 +459,9 @@ public class JFrameMostrarDProducto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnBorrarActionPerformed
 
-    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
-        LOG.info("[FSI] Star boton Nuevo : ");
-        habilitaControles(true);
-        limpiarControles();
-        sw = true;
-    }//GEN-LAST:event_btnNuevoActionPerformed
+    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
+
+    }//GEN-LAST:event_txtCodigoActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         LOG.info("[FSI] Star boton Cancelar : ");
@@ -546,6 +521,23 @@ public class JFrameMostrarDProducto extends javax.swing.JFrame {
         limpiarControles();
     }//GEN-LAST:event_btnGrabarActionPerformed
 
+    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
+
+        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
+        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
+        txtDesc.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 2).toString());
+        cmbCategoria.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 3).toString());
+        txtStock.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 4).toString());
+        txtPrecio.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 5).toString());
+        cmbUnidad.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 6).toString());
+        txtCaducidad.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 7).toString());
+        cmbUbic.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 8).toString());
+        cmbTrazabilidad.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 9).toString());
+        txtEntrada.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 10).toString());
+        txtSalida.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 11).toString());
+        txtEmpleado.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 12).toString());
+    }//GEN-LAST:event_tblMostrarMouseClicked
+
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         LOG.info("[FSI] Star boton salir : ");
 
@@ -555,40 +547,6 @@ public class JFrameMostrarDProducto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarDProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarDProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarDProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarDProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new JFrameMostrarDProducto().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrar;
@@ -602,7 +560,6 @@ public class JFrameMostrarDProducto extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbUbic;
     private javax.swing.JComboBox<String> cmbUnidad;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;

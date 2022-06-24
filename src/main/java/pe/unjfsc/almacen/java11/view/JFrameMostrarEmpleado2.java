@@ -10,22 +10,22 @@ import pe.unjfsc.almacen.java11.logical.CLVariacionEmpleado;
 import pe.unjfsc.almacen.java11.model.CICambioEmpleado;
 import pe.unjfsc.almacen.java11.model.imp.CMCambiarEmpleadoHashSet;
 
-public class JFrameMostrarEmpleado extends javax.swing.JFrame {
+public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
 
     private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarEmpleado");
     private HashSet<CEEmpleadoProducto> oHsData;
     private CICambioEmpleado oCIEmpleado;
     CEEmpleadoProducto oEmpleado;
     CMCambiarEmpleadoHashSet oCMEmpleado;
-    
     boolean sw;
 
-    public JFrameMostrarEmpleado() {
+    public JFrameMostrarEmpleado2() {
         initComponents();
-        setLocationRelativeTo(this);
         oCMEmpleado = new CMCambiarEmpleadoHashSet();
         oEmpleado = new CEEmpleadoProducto();
-
+        
+        setSize(741, 616);
+        setVisible(true);
         // title tbl
         String titulo[] = {"CODIGO", "NOMBRE", "AP PATERNO", "AP MATERNO", "DNI", "TELEFONO"};
         DefaultTableModel oModel = new DefaultTableModel(loadData(), titulo);
@@ -44,7 +44,6 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnSalir = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
@@ -76,29 +75,14 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tlbMostrar = new javax.swing.JTable();
+        btnSalir = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnSalir.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnSalir.setForeground(new java.awt.Color(51, 51, 51));
-        btnSalir.setText("SALIR");
-        btnSalir.setContentAreaFilled(false);
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 530, 120, 40));
 
         jPanel1.setBackground(new java.awt.Color(58, 78, 121));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNuevo.setIcon(new javax.swing.ImageIcon("C:\\Users\\tatia\\Desktop\\Quinto Ciclo\\Fundamentos de Sistemas de Información\\proyecto ejecucion\\Grupo04Almacen\\src\\main\\java\\img\\aceptar.png")); // NOI18N
         btnNuevo.setText("NUEVO");
         btnNuevo.setContentAreaFilled(false);
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
@@ -129,8 +113,6 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 200, 70));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 580));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -259,8 +241,6 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 510, 30));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 510, 350));
-
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -281,7 +261,15 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
 
         jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 490, 130));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 510, 150));
+        btnSalir.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(51, 51, 51));
+        btnSalir.setText("SALIR");
+        btnSalir.setContentAreaFilled(false);
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
         jPanel6.setBackground(new java.awt.Color(231, 96, 76));
 
@@ -296,10 +284,77 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 530, 120, 40));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
+
+        LOG.info("[FSI] Star boton Nuevo : ");
+        habilitaControles(true);
+        limpiarControles();
+        sw = true;
+    }//GEN-LAST:event_btnNuevoActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        LOG.info("[FSI] Star boton Eliminar : {}");
+        try {
+            int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea eliminar?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (!jTxtCodEmpleado.getText().isEmpty()) {
+                if (op == JOptionPane.YES_OPTION) {
+
+                    oCMEmpleado.eliminarEmpleadoCIC(jTxtCodEmpleado.getText());
+                    limpiarControles();
+                    JOptionPane.showMessageDialog(rootPane, "Registro borrado");
+                    mostrarDatos();
+                }
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Debe seleccionar un registro");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+
+        LOG.info("[FSI] Star boton Editar : {}");
+        habilitaControles(true);
+        sw = false;
+    }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
         LOG.info("[FSI] Star boton Grabar : {}");
@@ -330,26 +385,11 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         limpiarControles();
     }//GEN-LAST:event_btnGrabarActionPerformed
 
-    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        LOG.info("[FSI] Star boton Eliminar : {}");
-        try {
-            int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea eliminar?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-            if (!jTxtCodEmpleado.getText().isEmpty()) {
-                if (op == JOptionPane.YES_OPTION) {
-
-                    oCMEmpleado.eliminarEmpleadoCIC(jTxtCodEmpleado.getText());
-                    limpiarControles();
-                    JOptionPane.showMessageDialog(rootPane, "Registro borrado");
-                    mostrarDatos();
-                }
-            } else {
-                JOptionPane.showMessageDialog(rootPane, "Debe seleccionar un registro");
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, e);
-        }
-
-    }//GEN-LAST:event_btnBorrarActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        LOG.info("[FSI] Star boton Cancelar : ");
+        habilitaControles(false);
+        limpiarControles();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void tlbMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tlbMostrarMouseClicked
 
@@ -361,28 +401,6 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         jTextTelefono.setText(tlbMostrar.getValueAt(tlbMostrar.getSelectedRow(), 5).toString());
     }//GEN-LAST:event_tlbMostrarMouseClicked
 
-    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
-
-        LOG.info("[FSI] Star boton Nuevo : ");
-        habilitaControles(true);
-        limpiarControles();
-        sw = true;
-
-    }//GEN-LAST:event_btnNuevoActionPerformed
-
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-
-        LOG.info("[FSI] Star boton Editar : {}");
-        habilitaControles(true);
-        sw = false;
-    }//GEN-LAST:event_btnEditarActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        LOG.info("[FSI] Star boton Cancelar : ");
-        habilitaControles(false);
-        limpiarControles();
-    }//GEN-LAST:event_btnCancelarActionPerformed
-
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         LOG.info("[FSI] Star boton salir : ");
 
@@ -392,42 +410,11 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new JFrameMostrarEmpleado().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnCancelar;
-    public javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnGrabar;
     private javax.swing.JButton btnNuevo;
     private javax.swing.JButton btnSalir;
@@ -495,5 +482,4 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
 
         tlbMostrar.setModel(oModel);
     }
-
 }

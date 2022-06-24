@@ -10,7 +10,7 @@ import pe.unjfsc.almacen.java11.logical.CLVariacionPuesto;
 import pe.unjfsc.almacen.java11.model.CICambioPuesto;
 import pe.unjfsc.almacen.java11.model.imp.CMCambiarPuestoHashSet;
 
-public class JFrameMostrarPuesto extends javax.swing.JFrame {
+public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
 
     private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarPuesto");
 
@@ -20,13 +20,13 @@ public class JFrameMostrarPuesto extends javax.swing.JFrame {
     CMCambiarPuestoHashSet oCMPuesto;
     boolean sw;
 
-    public JFrameMostrarPuesto() {
+    public JFrameMostrarPuesto2() {
         initComponents();
-        setLocationRelativeTo(this);
 
         oCMPuesto = new CMCambiarPuestoHashSet();
         oPuesto = new CEPuestoAlmacen();
-
+        setSize(559, 493);
+        setVisible(true);
         String[] aTitulo = {"CODIGO", "NOMBRE PUESTO"};
         DefaultTableModel oModel = new DefaultTableModel(loadData(), aTitulo);
 
@@ -66,9 +66,6 @@ public class JFrameMostrarPuesto extends javax.swing.JFrame {
         tblMostrar = new javax.swing.JTable();
         jPanel6 = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(58, 78, 121));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -254,36 +251,28 @@ public class JFrameMostrarPuesto extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(280, 280, 280)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(276, 276, 276)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(13, 13, 13)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addGap(7, 7, 7)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
-
-        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
-        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
-
-    }//GEN-LAST:event_tblMostrarMouseClicked
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         LOG.info("[FSI] Star boton Nuevo : ");
@@ -292,11 +281,31 @@ public class JFrameMostrarPuesto extends javax.swing.JFrame {
         sw = true;
     }//GEN-LAST:event_btnNuevoActionPerformed
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        LOG.info("[FSI] Star boton Cancelar : ");
-        habilitaControles(false);
-        limpiarControles();
-    }//GEN-LAST:event_btnCancelarActionPerformed
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        LOG.info("[FSI] Star boton Editar : {}");
+        habilitaControles(true);
+        sw = false;
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        LOG.info("[FSI] Star boton Eliminar : {}");
+        try {
+            int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea eliminar?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (!txtCodigo.getText().isEmpty()) {
+                if (op == JOptionPane.YES_OPTION) {
+
+                    oCMPuesto.eliminarPuestoCIC(txtCodigo.getText());
+                    limpiarControles();
+                    JOptionPane.showMessageDialog(rootPane, "Registro borrado");
+                    mostrarDatos();
+                }
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Debe seleccionar un registro");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
         LOG.info("[FSI] Star boton Grabar : {}");
@@ -323,34 +332,20 @@ public class JFrameMostrarPuesto extends javax.swing.JFrame {
         limpiarControles();
     }//GEN-LAST:event_btnGrabarActionPerformed
 
-    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        LOG.info("[FSI] Star boton Eliminar : {}");
-        try {
-            int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea eliminar?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-            if (!txtCodigo.getText().isEmpty()) {
-                if (op == JOptionPane.YES_OPTION) {
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        LOG.info("[FSI] Star boton Cancelar : ");
+        habilitaControles(false);
+        limpiarControles();
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
-                    oCMPuesto.eliminarPuestoCIC(txtCodigo.getText());
-                    limpiarControles();
-                    JOptionPane.showMessageDialog(rootPane, "Registro borrado");
-                    mostrarDatos();
-                }
-            } else {
-                JOptionPane.showMessageDialog(rootPane, "Debe seleccionar un registro");
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, e);
-        }
-    }//GEN-LAST:event_btnBorrarActionPerformed
+    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
 
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-       LOG.info("[FSI] Star boton Editar : {}");
-        habilitaControles(true);
-        sw = false;
-    }//GEN-LAST:event_btnEditarActionPerformed
+        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
+        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
+    }//GEN-LAST:event_tblMostrarMouseClicked
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-       LOG.info("[FSI] Star boton salir : ");
+        LOG.info("[FSI] Star boton salir : ");
 
         int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea salir?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (op == JOptionPane.YES_OPTION) {
@@ -358,38 +353,6 @@ public class JFrameMostrarPuesto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarPuesto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarPuesto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarPuesto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarPuesto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new JFrameMostrarPuesto().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrar;
@@ -441,5 +404,4 @@ public class JFrameMostrarPuesto extends javax.swing.JFrame {
 
         tblMostrar.setModel(oModel);
     }
-
 }

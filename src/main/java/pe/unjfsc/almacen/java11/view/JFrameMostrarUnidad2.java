@@ -10,7 +10,7 @@ import pe.unjfsc.almacen.java11.logical.CLVariacionUnidad;
 import pe.unjfsc.almacen.java11.model.CICambioUnidad;
 import pe.unjfsc.almacen.java11.model.imp.CMCambioUnidadHashSet;
 
-public class JFrameMostrarUnidad extends javax.swing.JFrame {
+public class JFrameMostrarUnidad2 extends javax.swing.JInternalFrame {
 
     private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarUnidad");
 
@@ -20,12 +20,14 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
     CMCambioUnidadHashSet oCMUnidad;
     boolean sw;
 
-    public JFrameMostrarUnidad() {
+    public JFrameMostrarUnidad2() {
         initComponents();
-        setLocationRelativeTo(this);
 
         oCMUnidad = new CMCambioUnidadHashSet();
         oUnidad = new CEUnidadProducto();
+
+        setSize(558, 473);
+        setVisible(true);
 
         String[] aTitulo = {"CODIGO", "UNIDAD"};
         DefaultTableModel oModel = new DefaultTableModel(loadData(), aTitulo);
@@ -45,8 +47,8 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jButton5 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        btnSalir = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -66,15 +68,33 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblMostrar = new javax.swing.JTable();
-        jPanel4 = new javax.swing.JPanel();
-        btnSalir = new javax.swing.JButton();
 
-        jFormattedTextField1.setText("jFormattedTextField1");
+        jPanel4.setBackground(new java.awt.Color(231, 96, 76));
 
-        jButton5.setText("jButton1");
+        btnSalir.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(51, 51, 51));
+        btnSalir.setText("SALIR");
+        btnSalir.setBorder(null);
+        btnSalir.setContentAreaFilled(false);
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnSalir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
 
         jPanel1.setBackground(new java.awt.Color(58, 78, 121));
 
@@ -258,33 +278,6 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel4.setBackground(new java.awt.Color(231, 96, 76));
-
-        btnSalir.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnSalir.setForeground(new java.awt.Color(51, 51, 51));
-        btnSalir.setText("SALIR");
-        btnSalir.setBorder(null);
-        btnSalir.setContentAreaFilled(false);
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnSalir, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -315,18 +308,14 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        LOG.info("[FSI] Star boton salir : ");
 
-        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
-        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
-
-    }//GEN-LAST:event_tblMostrarMouseClicked
-
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        LOG.info("[FSI] Star boton Editar : {}");
-        habilitaControles(true);
-        sw = false;
-    }//GEN-LAST:event_btnEditarActionPerformed
+        int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea salir?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (op == JOptionPane.YES_OPTION) {
+            dispose();
+        }
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         LOG.info("[FSI] Star boton Nuevo : ");
@@ -334,6 +323,36 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
         limpiarControles();
         sw = true;
     }//GEN-LAST:event_btnNuevoActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        LOG.info("[FSI] Star boton Editar : {}");
+        habilitaControles(true);
+        sw = false;
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        LOG.info("[FSI] Star boton Eliminar : {}");
+        try {
+            int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea eliminar?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (!txtCodigo.getText().isEmpty()) {
+                if (op == JOptionPane.YES_OPTION) {
+
+                    oCMUnidad.eliminarUnidadCIC(txtCodigo.getText());
+                    limpiarControles();
+                    JOptionPane.showMessageDialog(rootPane, "Registro borrado");
+                    mostrarDatos();
+                }
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Debe seleccionar un registro");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCodigoActionPerformed
 
     private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
         LOG.info("[FSI] Star boton Grabar : {}");
@@ -366,49 +385,12 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
         limpiarControles();
     }//GEN-LAST:event_btnCancelarActionPerformed
 
-    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        LOG.info("[FSI] Star boton Eliminar : {}");
-        try {
-            int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea eliminar?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-            if (!txtCodigo.getText().isEmpty()) {
-                if (op == JOptionPane.YES_OPTION) {
+    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
 
-                    oCMUnidad.eliminarUnidadCIC(txtCodigo.getText());
-                    limpiarControles();
-                    JOptionPane.showMessageDialog(rootPane, "Registro borrado");
-                    mostrarDatos();
-                }
-            } else {
-                JOptionPane.showMessageDialog(rootPane, "Debe seleccionar un registro");
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, e);
-        }
+        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
+        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
+    }//GEN-LAST:event_tblMostrarMouseClicked
 
-    }//GEN-LAST:event_btnBorrarActionPerformed
-
-    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-         LOG.info("[FSI] Star boton salir : ");
-
-        int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea salir?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-        if (op == JOptionPane.YES_OPTION) {
-            dispose();
-        }
-
-    }//GEN-LAST:event_btnSalirActionPerformed
-
-    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCodigoActionPerformed
-
-    public static void main(String args[]) {
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new JFrameMostrarUnidad().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrar;
@@ -417,8 +399,6 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
     private javax.swing.JButton btnGrabar;
     private javax.swing.JButton btnNuevo;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
@@ -435,7 +415,6 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
-
     private void habilitaControles(boolean b) {
         txtCodigo.setEditable(b);
         txtNombre.setEditable(b);
@@ -462,5 +441,4 @@ public class JFrameMostrarUnidad extends javax.swing.JFrame {
 
         tblMostrar.setModel(oModel);
     }
-
 }
