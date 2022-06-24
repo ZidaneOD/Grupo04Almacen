@@ -110,6 +110,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
 
         btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Freddy\\Documents\\unjfsFSI\\Grupo04Almacen\\src\\main\\resources\\img\\aceptar.png")); // NOI18N
         btnBorrar.setText("BORRAR");
         btnBorrar.setContentAreaFilled(false);
         btnBorrar.addActionListener(new java.awt.event.ActionListener() {
