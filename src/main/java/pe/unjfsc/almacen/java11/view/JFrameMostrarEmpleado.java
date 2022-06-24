@@ -98,6 +98,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
 
         btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
         btnNuevo.setText("NUEVO");
         btnNuevo.setContentAreaFilled(false);
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
@@ -120,6 +121,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
 
         btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/aceptar.png"))); // NOI18N
         btnEditar.setText("EDITAR");
         btnEditar.setContentAreaFilled(false);
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -426,9 +428,9 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnEditar;
+    public javax.swing.JButton btnEditar;
     private javax.swing.JButton btnGrabar;
-    private javax.swing.JButton btnNuevo;
+    public javax.swing.JButton btnNuevo;
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
