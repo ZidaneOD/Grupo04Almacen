@@ -83,6 +83,7 @@ public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
 
         btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/añadir.png"))); // NOI18N
         btnNuevo.setText("NUEVO");
         btnNuevo.setContentAreaFilled(false);
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
@@ -94,6 +95,7 @@ public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
 
         btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
         btnBorrar.setText("BORRAR");
         btnBorrar.setContentAreaFilled(false);
         btnBorrar.addActionListener(new java.awt.event.ActionListener() {
@@ -105,6 +107,7 @@ public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
 
         btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
         btnEditar.setText("EDITAR");
         btnEditar.setContentAreaFilled(false);
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +164,7 @@ public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
 
         btnGrabar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnGrabar.setForeground(new java.awt.Color(255, 255, 255));
+        btnGrabar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guardar.png"))); // NOI18N
         btnGrabar.setText("GRABAR");
         btnGrabar.setContentAreaFilled(false);
         btnGrabar.addActionListener(new java.awt.event.ActionListener() {
@@ -172,6 +176,7 @@ public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
 
         btnCancelar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel.png"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         btnCancelar.setContentAreaFilled(false);
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -179,7 +184,7 @@ public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 120, 40));
+        jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 140, 40));
 
         jPanel4.setBackground(new java.awt.Color(58, 78, 121));
 
@@ -237,7 +242,7 @@ public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
 
         jLabel7.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("CATEGORIA");
+        jLabel7.setText("EMPLEADOS A REGISTRAR");
         jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 510, 30));
 
@@ -263,6 +268,7 @@ public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
 
         btnSalir.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(51, 51, 51));
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sal.png"))); // NOI18N
         btnSalir.setText("SALIR");
         btnSalir.setContentAreaFilled(false);
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -412,12 +418,12 @@ public class JFrameMostrarEmpleado2 extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBorrar;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnGrabar;
-    private javax.swing.JButton btnNuevo;
-    private javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnBorrar;
+    public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnEditar;
+    public javax.swing.JButton btnGrabar;
+    public javax.swing.JButton btnNuevo;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

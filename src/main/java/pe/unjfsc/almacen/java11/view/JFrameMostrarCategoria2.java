@@ -49,7 +49,6 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
 
         jPanel3 = new javax.swing.JPanel();
         btnNuevo = new javax.swing.JButton();
-        btnGrabar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -62,6 +61,8 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         btnCancelar = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        btnGrabar = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
@@ -74,6 +75,7 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
         btnNuevo.setBackground(new java.awt.Color(255, 255, 255));
         btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/añadir.png"))); // NOI18N
         btnNuevo.setText("NUEVO");
         btnNuevo.setBorder(null);
         btnNuevo.setContentAreaFilled(false);
@@ -89,23 +91,10 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
         });
         jPanel3.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 160, 50));
 
-        btnGrabar.setBackground(new java.awt.Color(255, 255, 255));
-        btnGrabar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnGrabar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGrabar.setText("GRABAR");
-        btnGrabar.setBorder(null);
-        btnGrabar.setContentAreaFilled(false);
-        btnGrabar.setEnabled(false);
-        btnGrabar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGrabarActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnGrabar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 160, 50));
-
         btnBorrar.setBackground(new java.awt.Color(255, 255, 255));
         btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
         btnBorrar.setText("BORRAR");
         btnBorrar.setBorder(null);
         btnBorrar.setContentAreaFilled(false);
@@ -119,6 +108,7 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
         btnEditar.setBackground(new java.awt.Color(255, 255, 255));
         btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
         btnEditar.setText("EDITAR");
         btnEditar.setBorder(null);
         btnEditar.setContentAreaFilled(false);
@@ -127,7 +117,7 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, 50));
+        jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 50));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -173,11 +163,12 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
         btnCancelar.setBackground(new java.awt.Color(51, 255, 153));
         btnCancelar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel.png"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         btnCancelar.setBorder(null);
         btnCancelar.setContentAreaFilled(false);
         btnCancelar.setEnabled(false);
-        btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);
@@ -185,13 +176,34 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
         });
         jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 40));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 140, -1));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 140, -1));
+
+        jPanel6.setBackground(new java.awt.Color(58, 78, 121));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnGrabar.setBackground(new java.awt.Color(255, 255, 255));
+        btnGrabar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnGrabar.setForeground(new java.awt.Color(255, 255, 255));
+        btnGrabar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guardar.png"))); // NOI18N
+        btnGrabar.setText("GRABAR");
+        btnGrabar.setBorder(null);
+        btnGrabar.setContentAreaFilled(false);
+        btnGrabar.setEnabled(false);
+        btnGrabar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGrabarActionPerformed(evt);
+            }
+        });
+        jPanel6.add(btnGrabar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 40));
+
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 150, 40));
 
         jPanel4.setBackground(new java.awt.Color(231, 96, 76));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnSalir.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(51, 51, 51));
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sal.png"))); // NOI18N
         btnSalir.setText("SALIR");
         btnSalir.setBorder(null);
         btnSalir.setContentAreaFilled(false);
@@ -360,12 +372,12 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBorrar;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnGrabar;
-    private javax.swing.JButton btnNuevo;
-    private javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnBorrar;
+    public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnEditar;
+    public javax.swing.JButton btnGrabar;
+    public javax.swing.JButton btnNuevo;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -374,6 +386,7 @@ public class JFrameMostrarCategoria2 extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;

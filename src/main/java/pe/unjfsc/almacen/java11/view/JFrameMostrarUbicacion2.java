@@ -100,7 +100,7 @@ public class JFrameMostrarUbicacion2 extends javax.swing.JInternalFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -108,6 +108,7 @@ public class JFrameMostrarUbicacion2 extends javax.swing.JInternalFrame {
 
         btnSalir.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(51, 51, 51));
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sal.png"))); // NOI18N
         btnSalir.setText("SALIR");
         btnSalir.setContentAreaFilled(false);
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -177,6 +178,7 @@ public class JFrameMostrarUbicacion2 extends javax.swing.JInternalFrame {
 
         btnGrabar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnGrabar.setForeground(new java.awt.Color(255, 255, 255));
+        btnGrabar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guardar.png"))); // NOI18N
         btnGrabar.setText("GRABAR");
         btnGrabar.setContentAreaFilled(false);
         btnGrabar.setEnabled(false);
@@ -190,22 +192,20 @@ public class JFrameMostrarUbicacion2 extends javax.swing.JInternalFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnGrabar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(btnGrabar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnGrabar, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+            .addComponent(btnGrabar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 110, 30));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 120, 30));
 
         jPanel6.setBackground(new java.awt.Color(58, 78, 121));
 
         btnCancelar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel.png"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         btnCancelar.setContentAreaFilled(false);
         btnCancelar.setEnabled(false);
@@ -219,7 +219,7 @@ public class JFrameMostrarUbicacion2 extends javax.swing.JInternalFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnCancelar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btnCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,6 +250,7 @@ public class JFrameMostrarUbicacion2 extends javax.swing.JInternalFrame {
 
         btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/añadir.png"))); // NOI18N
         btnNuevo.setText("NUEVO");
         btnNuevo.setContentAreaFilled(false);
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
@@ -260,6 +261,7 @@ public class JFrameMostrarUbicacion2 extends javax.swing.JInternalFrame {
 
         btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
         btnEditar.setText("EDITAR");
         btnEditar.setContentAreaFilled(false);
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -270,6 +272,7 @@ public class JFrameMostrarUbicacion2 extends javax.swing.JInternalFrame {
 
         btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
         btnBorrar.setText("BORRAR");
         btnBorrar.setContentAreaFilled(false);
         btnBorrar.addActionListener(new java.awt.event.ActionListener() {
@@ -421,11 +424,11 @@ public class JFrameMostrarUbicacion2 extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBorrar;
+    public javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnEditar;
+    public javax.swing.JButton btnEditar;
     private javax.swing.JButton btnGrabar;
-    private javax.swing.JButton btnNuevo;
+    public javax.swing.JButton btnNuevo;
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

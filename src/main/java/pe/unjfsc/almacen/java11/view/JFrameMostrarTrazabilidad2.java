@@ -24,7 +24,7 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
         oCMTraza = new CMCambioTrazabilidadHashSet();
         oTrazabilidad = new CETrazabilidadProducto();
         initComponents();
-        setSize(562, 433);
+        setSize(578, 434);
         setVisible(true);
         String[] aTitulo = {"CODIGO", "NOMBRE C"};
         DefaultTableModel oModel = new DefaultTableModel(loadData(), aTitulo);
@@ -71,6 +71,7 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
 
         btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/añadir.png"))); // NOI18N
         btnNuevo.setText("NUEVO");
         btnNuevo.setContentAreaFilled(false);
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +82,7 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
 
         btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
         btnEditar.setText("EDITAR");
         btnEditar.setContentAreaFilled(false);
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +93,7 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
 
         btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
         btnBorrar.setText("BORRAR");
         btnBorrar.setContentAreaFilled(false);
         btnBorrar.addActionListener(new java.awt.event.ActionListener() {
@@ -112,11 +115,11 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addComponent(btnBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -150,6 +153,7 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
         btnGrabar.setBackground(new java.awt.Color(255, 255, 255));
         btnGrabar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnGrabar.setForeground(new java.awt.Color(255, 255, 255));
+        btnGrabar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guardar.png"))); // NOI18N
         btnGrabar.setText("GRABAR");
         btnGrabar.setContentAreaFilled(false);
         btnGrabar.setEnabled(false);
@@ -158,11 +162,12 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
                 btnGrabarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGrabar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 90, 30));
+        jPanel1.add(btnGrabar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 120, 30));
 
         btnCancelar.setBackground(new java.awt.Color(255, 255, 255));
         btnCancelar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel.png"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         btnCancelar.setContentAreaFilled(false);
         btnCancelar.setEnabled(false);
@@ -171,7 +176,7 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 110, 30));
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 130, 30));
 
         jSeparator12.setBackground(new java.awt.Color(58, 78, 121));
         jSeparator12.setForeground(new java.awt.Color(58, 78, 121));
@@ -191,14 +196,14 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 110, Short.MAX_VALUE)
+            .addGap(0, 120, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 30, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 110, 30));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 120, 30));
 
         jPanel6.setBackground(new java.awt.Color(58, 78, 121));
 
@@ -206,14 +211,14 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 110, Short.MAX_VALUE)
+            .addGap(0, 130, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 30, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 110, 30));
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 130, 30));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -239,6 +244,7 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
 
         btnSalir.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(51, 51, 51));
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sal.png"))); // NOI18N
         btnSalir.setText("SALIR");
         btnSalir.setContentAreaFilled(false);
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -274,7 +280,8 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(243, 243, 243)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -376,12 +383,12 @@ public class JFrameMostrarTrazabilidad2 extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBorrar;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnGrabar;
-    private javax.swing.JButton btnNuevo;
-    private javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnBorrar;
+    public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnEditar;
+    public javax.swing.JButton btnGrabar;
+    public javax.swing.JButton btnNuevo;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
