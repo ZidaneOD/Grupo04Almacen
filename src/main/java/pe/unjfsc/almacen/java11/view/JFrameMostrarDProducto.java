@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package pe.unjfsc.almacen.java11.view;
 
 import java.util.HashSet;
@@ -11,7 +15,7 @@ import pe.unjfsc.almacen.java11.logical.CLVariacionDProducto;
 import pe.unjfsc.almacen.java11.model.CICambioDProducto;
 import pe.unjfsc.almacen.java11.model.imp.CMCambioDProductoHashSet;
 
-public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
+public class JFrameMostrarDProducto extends javax.swing.JFrame {
 
     private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarDProducto");
 
@@ -21,14 +25,14 @@ public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
     CMCambioDProductoHashSet oCMProducto;
     boolean sw;
 
-    public JFrameMostrarDProducto2() {
+    public JFrameMostrarDProducto() {
         oCMProducto = new CMCambioDProductoHashSet();
         oProducto = new CEDetalleProducto();
         initComponents();
-        
-         setSize(855, 695);
+        setLocationRelativeTo(null);
+        setSize(855, 695);
         setVisible(true);
-        
+
         String[] aTitulo = {"SKU", "PRODUCTO", "DESCRIPCIÓN", "CATEGORIA", "STOCK", "PRECIO", "UNIDAD", "F. CADUCIDAD", "UBICACIÓN", "ESTADO", "ENTRADA", "SALIDA", "EMPLEADO"};
         DefaultTableModel oModel = new DefaultTableModel(loadData(), aTitulo);
 
@@ -47,10 +51,9 @@ public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
-        btnNuevo = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
-        btnBorrar = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblMostrar = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         txtCodigo = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
@@ -92,53 +95,49 @@ public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
         jSeparator9 = new javax.swing.JSeparator();
         jSeparator10 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblMostrar = new javax.swing.JTable();
         jPanel6 = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        btnNuevo = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
 
-        jPanel3.setBackground(new java.awt.Color(58, 78, 121));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
-        btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/añadir.png"))); // NOI18N
-        btnNuevo.setText("NUEVO");
-        btnNuevo.setBorder(null);
-        btnNuevo.setContentAreaFilled(false);
-        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNuevoActionPerformed(evt);
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        tblMostrar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        tblMostrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblMostrarMouseClicked(evt);
             }
         });
-        jPanel3.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 190, 60));
+        jScrollPane1.setViewportView(tblMostrar);
 
-        btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnEditar.setForeground(new java.awt.Color(255, 255, 255));
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
-        btnEditar.setText("EDITAR");
-        btnEditar.setBorder(null);
-        btnEditar.setContentAreaFilled(false);
-        btnEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 190, 60));
-
-        btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
-        btnBorrar.setText("BORRAR");
-        btnBorrar.setBorder(null);
-        btnBorrar.setContentAreaFilled(false);
-        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBorrarActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 190, 60));
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -355,40 +354,6 @@ public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 620, 30));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-
-        tblMostrar.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        tblMostrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tblMostrarMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(tblMostrar);
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         jPanel6.setBackground(new java.awt.Color(231, 96, 76));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -403,6 +368,48 @@ public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
             }
         });
         jPanel6.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 30));
+
+        jPanel3.setBackground(new java.awt.Color(58, 78, 121));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/añadir.png"))); // NOI18N
+        btnNuevo.setText("NUEVO");
+        btnNuevo.setBorder(null);
+        btnNuevo.setContentAreaFilled(false);
+        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 190, 60));
+
+        btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
+        btnEditar.setText("EDITAR");
+        btnEditar.setBorder(null);
+        btnEditar.setContentAreaFilled(false);
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 190, 60));
+
+        btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
+        btnBorrar.setText("BORRAR");
+        btnBorrar.setBorder(null);
+        btnBorrar.setContentAreaFilled(false);
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 190, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -420,7 +427,7 @@ public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -433,38 +440,22 @@ public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
-        LOG.info("[FSI] Star boton Nuevo : ");
-        habilitaControles(true);
-        limpiarControles();
-        sw = true;
-    }//GEN-LAST:event_btnNuevoActionPerformed
+    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
 
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        LOG.info("[FSI] Star boton Editar : {}");
-        habilitaControles(true);
-        sw = false;
-    }//GEN-LAST:event_btnEditarActionPerformed
-
-    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
-        LOG.info("[FSI] Star boton Eliminar : {}");
-        try {
-            int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea eliminar?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-            if (!txtCodigo.getText().isEmpty()) {
-                if (op == JOptionPane.YES_OPTION) {
-
-                    oCMProducto.eliminarDetallePCIC(txtCodigo.getText());
-                    limpiarControles();
-                    JOptionPane.showMessageDialog(rootPane, "Registro borrado");
-                    mostrarDatos();
-                }
-            } else {
-                JOptionPane.showMessageDialog(rootPane, "Debe seleccionar un registro");
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, e);
-        }
-    }//GEN-LAST:event_btnBorrarActionPerformed
+        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
+        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
+        txtDesc.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 2).toString());
+        cmbCategoria.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 3).toString());
+        txtStock.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 4).toString());
+        txtPrecio.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 5).toString());
+        cmbUnidad.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 6).toString());
+        txtCaducidad.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 7).toString());
+        cmbUbic.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 8).toString());
+        cmbTrazabilidad.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 9).toString());
+        txtEntrada.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 10).toString());
+        txtSalida.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 11).toString());
+        txtEmpleado.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 12).toString());
+    }//GEN-LAST:event_tblMostrarMouseClicked
 
     private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
 
@@ -528,23 +519,6 @@ public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
         limpiarControles();
     }//GEN-LAST:event_btnGrabarActionPerformed
 
-    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
-
-        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
-        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
-        txtDesc.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 2).toString());
-        cmbCategoria.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 3).toString());
-        txtStock.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 4).toString());
-        txtPrecio.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 5).toString());
-        cmbUnidad.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 6).toString());
-        txtCaducidad.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 7).toString());
-        cmbUbic.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 8).toString());
-        cmbTrazabilidad.setSelectedItem(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 9).toString());
-        txtEntrada.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 10).toString());
-        txtSalida.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 11).toString());
-        txtEmpleado.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 12).toString());
-    }//GEN-LAST:event_tblMostrarMouseClicked
-
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         LOG.info("[FSI] Star boton salir : ");
 
@@ -553,6 +527,39 @@ public class JFrameMostrarDProducto2 extends javax.swing.JInternalFrame {
             dispose();
         }
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
+        LOG.info("[FSI] Star boton Nuevo : ");
+        habilitaControles(true);
+        limpiarControles();
+        sw = true;
+    }//GEN-LAST:event_btnNuevoActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        LOG.info("[FSI] Star boton Editar : {}");
+        habilitaControles(true);
+        sw = false;
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        LOG.info("[FSI] Star boton Eliminar : {}");
+        try {
+            int op = JOptionPane.showConfirmDialog(rootPane, "¿Está seguro que desea eliminar?", "Pregunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            if (!txtCodigo.getText().isEmpty()) {
+                if (op == JOptionPane.YES_OPTION) {
+
+                    oCMProducto.eliminarDetallePCIC(txtCodigo.getText());
+                    limpiarControles();
+                    JOptionPane.showMessageDialog(rootPane, "Registro borrado");
+                    mostrarDatos();
+                }
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Debe seleccionar un registro");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e);
+        }
+    }//GEN-LAST:event_btnBorrarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

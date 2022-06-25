@@ -1,5 +1,8 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package pe.unjfsc.almacen.java11.view;
-
 import java.util.HashSet;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -9,10 +12,8 @@ import pe.unjfsc.almacen.java11.entity.CEPuestoAlmacen;
 import pe.unjfsc.almacen.java11.logical.CLVariacionPuesto;
 import pe.unjfsc.almacen.java11.model.CICambioPuesto;
 import pe.unjfsc.almacen.java11.model.imp.CMCambiarPuestoHashSet;
-
-public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
-
-    private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarPuesto");
+public class JFrameMostrarPuesto extends javax.swing.JFrame {
+private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarPuesto");
 
     private HashSet<CEPuestoAlmacen> oHsData;
     private CICambioPuesto oCIPuesto;
@@ -20,13 +21,15 @@ public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
     CMCambiarPuestoHashSet oCMPuesto;
     boolean sw;
 
-    public JFrameMostrarPuesto2() {
+    public JFrameMostrarPuesto() {
         initComponents();
 
         oCMPuesto = new CMCambiarPuestoHashSet();
         oPuesto = new CEPuestoAlmacen();
         setSize(573, 495);
         setVisible(true);
+        setLocationRelativeTo(null);
+        
         String[] aTitulo = {"CODIGO", "NOMBRE PUESTO"};
         DefaultTableModel oModel = new DefaultTableModel(loadData(), aTitulo);
 
@@ -40,15 +43,13 @@ public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
         CLVariacionPuesto oLogicalPuesto = new CLVariacionPuesto();
         return oLogicalPuesto.convertHashSetArray(oHsData);
     }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        btnNuevo = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
-        btnBorrar = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblMostrar = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
@@ -61,50 +62,38 @@ public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
         btnCancelar = new javax.swing.JButton();
         jSeparator11 = new javax.swing.JSeparator();
         jSeparator12 = new javax.swing.JSeparator();
-        jPanel3 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblMostrar = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
+        btnNuevo = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         btnSalir = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(58, 78, 121));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
-        btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
-        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/añadir.png"))); // NOI18N
-        btnNuevo.setText("NUEVO");
-        btnNuevo.setContentAreaFilled(false);
-        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNuevoActionPerformed(evt);
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblMostrar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        tblMostrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblMostrarMouseClicked(evt);
             }
         });
-        jPanel1.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 160, 60));
+        jScrollPane1.setViewportView(tblMostrar);
 
-        btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnEditar.setForeground(new java.awt.Color(255, 255, 255));
-        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
-        btnEditar.setText("EDITAR");
-        btnEditar.setContentAreaFilled(false);
-        btnEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 60));
-
-        btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
-        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
-        btnBorrar.setText("BORRAR");
-        btnBorrar.setContentAreaFilled(false);
-        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBorrarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 160, 60));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 360, 160));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -196,28 +185,44 @@ public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
         jSeparator12.setForeground(new java.awt.Color(58, 78, 121));
         jPanel2.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 150, 20));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(58, 78, 121));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tblMostrar.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
-            }
-        ));
-        tblMostrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tblMostrarMouseClicked(evt);
+        btnNuevo.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/añadir.png"))); // NOI18N
+        btnNuevo.setText("NUEVO");
+        btnNuevo.setContentAreaFilled(false);
+        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoActionPerformed(evt);
             }
         });
-        jScrollPane1.setViewportView(tblMostrar);
+        jPanel1.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 160, 60));
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 360, 160));
+        btnEditar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
+        btnEditar.setText("EDITAR");
+        btnEditar.setContentAreaFilled(false);
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 60));
+
+        btnBorrar.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/borrar.png"))); // NOI18N
+        btnBorrar.setText("BORRAR");
+        btnBorrar.setContentAreaFilled(false);
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 160, 60));
 
         jPanel6.setBackground(new java.awt.Color(231, 96, 76));
 
@@ -277,6 +282,43 @@ public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
+
+        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
+        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
+    }//GEN-LAST:event_tblMostrarMouseClicked
+
+    private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
+        LOG.info("[FSI] Star boton Grabar : {}");
+
+        //Verificar
+        if (!txtCodigo.getText().isEmpty()) {
+
+            oPuesto.setCodiPues(txtCodigo.getText());
+            oPuesto.setNombPues(txtNombre.getText());
+
+            if (sw) {
+                oCMPuesto.savePuestoCIC(oPuesto);
+                LOG.info("[FSI] Dato Grabado : {}");
+            } else {
+                oCMPuesto.modificarPuestoCIC(txtCodigo.getText(), txtNombre.getText());
+                LOG.info("[FSI] Dato Editado : {}");
+            }
+
+            mostrarDatos();
+        } else {
+            LOG.info("[FSI] Error al ingreso de datos : {} ", txtCodigo.getText(), " - ", txtNombre.getText());
+        }
+        habilitaControles(false);
+        limpiarControles();
+    }//GEN-LAST:event_btnGrabarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        LOG.info("[FSI] Star boton Cancelar : ");
+        habilitaControles(false);
+        limpiarControles();
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         LOG.info("[FSI] Star boton Nuevo : ");
         habilitaControles(true);
@@ -310,43 +352,6 @@ public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_btnBorrarActionPerformed
 
-    private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
-        LOG.info("[FSI] Star boton Grabar : {}");
-
-        //Verificar
-        if (!txtCodigo.getText().isEmpty()) {
-
-            oPuesto.setCodiPues(txtCodigo.getText());
-            oPuesto.setNombPues(txtNombre.getText());
-
-            if (sw) {
-                oCMPuesto.savePuestoCIC(oPuesto);
-                LOG.info("[FSI] Dato Grabado : {}");
-            } else {
-                oCMPuesto.modificarPuestoCIC(txtCodigo.getText(), txtNombre.getText());
-                LOG.info("[FSI] Dato Editado : {}");
-            }
-
-            mostrarDatos();
-        } else {
-            LOG.info("[FSI] Error al ingreso de datos : {} ", txtCodigo.getText(), " - ", txtNombre.getText());
-        }
-        habilitaControles(false);
-        limpiarControles();
-    }//GEN-LAST:event_btnGrabarActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        LOG.info("[FSI] Star boton Cancelar : ");
-        habilitaControles(false);
-        limpiarControles();
-    }//GEN-LAST:event_btnCancelarActionPerformed
-
-    private void tblMostrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMostrarMouseClicked
-
-        txtCodigo.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 0).toString());
-        txtNombre.setText(tblMostrar.getValueAt(tblMostrar.getSelectedRow(), 1).toString());
-    }//GEN-LAST:event_tblMostrarMouseClicked
-
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         LOG.info("[FSI] Star boton salir : ");
 
@@ -356,6 +361,9 @@ public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    /**
+     * @param args the command line arguments
+     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnBorrar;
@@ -381,7 +389,7 @@ public class JFrameMostrarPuesto2 extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 
-    private void habilitaControles(boolean b) {
+     private void habilitaControles(boolean b) {
         txtCodigo.setEditable(b);
         txtNombre.setEditable(b);
 
