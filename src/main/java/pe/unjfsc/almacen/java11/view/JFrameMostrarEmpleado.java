@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package pe.unjfsc.almacen.java11.view;
 import java.util.HashSet;
 import javax.swing.JOptionPane;
@@ -12,15 +8,11 @@ import pe.unjfsc.almacen.java11.entity.CEEmpleadoProducto;
 import pe.unjfsc.almacen.java11.logical.CLVariacionEmpleado;
 import pe.unjfsc.almacen.java11.model.CICambioEmpleado;
 import pe.unjfsc.almacen.java11.model.imp.CMCambiarEmpleadoHashSet;
-/**
- *
- * @author TATIANA
- */
+
+
 public class JFrameMostrarEmpleado extends javax.swing.JFrame {
 
-    /**
-     * Creates new form JFrameMostrarEmpleado
-     */
+    
     private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarEmpleado");
     private HashSet<CEEmpleadoProducto> oHsData;
     private CICambioEmpleado oCIEmpleado;
@@ -187,9 +179,11 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextTelefono.setEditable(false);
         jTextTelefono.setBorder(null);
         jPanel2.add(jTextTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 170, 30));
 
+        jTxtCodEmpleado.setEditable(false);
         jTxtCodEmpleado.setBorder(null);
         jPanel2.add(jTxtCodEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 170, 30));
 
@@ -201,12 +195,15 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         jLabel4.setText("NOMBRE:");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 140, 30));
 
+        jTextNombre.setEditable(false);
         jTextNombre.setBorder(null);
         jPanel2.add(jTextNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 170, 30));
 
+        jTextDni.setEditable(false);
         jTextDni.setBorder(null);
         jPanel2.add(jTextDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 170, 30));
 
+        jTexApPaterno.setEditable(false);
         jTexApPaterno.setBorder(null);
         jPanel2.add(jTexApPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 170, 30));
 
@@ -218,6 +215,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         jLabel2.setText("AP MATERNO:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 140, 30));
 
+        jTexApMaterno.setEditable(false);
         jTexApMaterno.setBorder(null);
         jPanel2.add(jTexApMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 170, 30));
 
@@ -234,6 +232,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         btnGrabar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guardar.png"))); // NOI18N
         btnGrabar.setText("GRABAR");
         btnGrabar.setContentAreaFilled(false);
+        btnGrabar.setEnabled(false);
         btnGrabar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGrabarActionPerformed(evt);
@@ -246,6 +245,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel.png"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         btnCancelar.setContentAreaFilled(false);
+        btnCancelar.setEnabled(false);
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);

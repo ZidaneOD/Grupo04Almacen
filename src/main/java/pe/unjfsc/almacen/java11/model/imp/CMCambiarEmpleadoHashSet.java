@@ -22,10 +22,10 @@ public class CMCambiarEmpleadoHashSet  implements CICambioEmpleado{
 
         LOG.info("[FSI] Count del HashSet :", oHsData.isEmpty());
         oHsData.add(new CEEmpleadoProducto("EM01", "Andy","Fernandez","Erazo","44784","9635545"));
-        oHsData.add(new CEEmpleadoProducto("EM02", "Gustavo","Duran","Erazo","44784","978545"));
-        oHsData.add(new CEEmpleadoProducto("EM03", "Zidane","Ortiz","Erazo","4478465","969635545"));
-        oHsData.add(new CEEmpleadoProducto("EM04", "Evelyn","Calixto","Erazo","4478784","9659525"));
-        oHsData.add(new CEEmpleadoProducto("EM05", "Tatiana","Quesquen","Erazo","1544784","9774432"));
+        oHsData.add(new CEEmpleadoProducto("EM02", "Gustavo","Duran","Vasquez","44784","978545"));
+        oHsData.add(new CEEmpleadoProducto("EM03", "Zidane","Ortiz","Diaz","4478465","969635545"));
+        oHsData.add(new CEEmpleadoProducto("EM04", "Evelyn","Calixto","Huanca","4478784","9659525"));
+        oHsData.add(new CEEmpleadoProducto("EM05", "Tatiana","Quesquen","Carvalo","1544784","9774432"));
         LOG.info("[FSI] After - Count del HashSet : {}", oHsData.size());
     
     }

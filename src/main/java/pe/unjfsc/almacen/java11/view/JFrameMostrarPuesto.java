@@ -102,9 +102,11 @@ private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarPuesto")
         jLabel2.setText("PUESTO:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 110, 130, 30));
 
+        txtNombre.setEditable(false);
         txtNombre.setBorder(null);
         jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 110, 150, 30));
 
+        txtCodigo.setEditable(false);
         txtCodigo.setBorder(null);
         jPanel2.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 70, 150, 30));
 
@@ -125,6 +127,7 @@ private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarPuesto")
         btnGrabar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/guardar.png"))); // NOI18N
         btnGrabar.setText("GRABAR");
         btnGrabar.setContentAreaFilled(false);
+        btnGrabar.setEnabled(false);
         btnGrabar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGrabarActionPerformed(evt);
@@ -156,6 +159,7 @@ private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarPuesto")
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel.png"))); // NOI18N
         btnCancelar.setText("CANCELAR");
         btnCancelar.setContentAreaFilled(false);
+        btnCancelar.setEnabled(false);
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarActionPerformed(evt);

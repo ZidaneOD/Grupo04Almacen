@@ -7,7 +7,7 @@ public class CLVariacionEmpleado {
 
     public Object[][] convertHashSetArray(HashSet<CEEmpleadoProducto> poHsData) {
 
-        String[][] aDataResponse = new String[poHsData.size()][13];
+        String[][] aDataResponse = new String[poHsData.size()][6];
         int iRow = 0;
         for (CEEmpleadoProducto oItem : poHsData) {
             aDataResponse[iRow][0] = oItem.getCodiEmp();
