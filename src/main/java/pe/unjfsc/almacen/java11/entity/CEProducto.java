@@ -1,7 +1,7 @@
-
 package pe.unjfsc.almacen.java11.entity;
 
 public class CEProducto {
+
     private String idProducto;
     private String nombProd;
     private String descProd;
@@ -10,14 +10,16 @@ public class CEProducto {
     private String idMarca;
     private double pesoProd;
     private String idUnidadM;
+    private int presxe;
+    private String undpxc;
     private String idEmpaque;
-    private int  unidad;
+    private int unidad;
     private String imagProd;
 
     public CEProducto() {
     }
 
-    public CEProducto(String idProducto, String nombProd, String descProd, String idCategoria, String idSabor, String idMarca, double pesoProd, String idUnidadM, String idEmpaque, int unidad, String imagProd) {
+    public CEProducto(String idProducto, String nombProd, String descProd, String idCategoria, String idSabor, String idMarca, double pesoProd, String idUnidadM, int presxe, String undpxc, String idEmpaque, int unidad, String imagProd) {
         this.idProducto = idProducto;
         this.nombProd = nombProd;
         this.descProd = descProd;
@@ -26,16 +28,10 @@ public class CEProducto {
         this.idMarca = idMarca;
         this.pesoProd = pesoProd;
         this.idUnidadM = idUnidadM;
+        this.presxe = presxe;
+        this.undpxc = undpxc;
         this.idEmpaque = idEmpaque;
         this.unidad = unidad;
-        this.imagProd = imagProd;
-    }
-
-    public String getImagProd() {
-        return imagProd;
-    }
-
-    public void setImagProd(String imagProd) {
         this.imagProd = imagProd;
     }
 
@@ -103,6 +99,22 @@ public class CEProducto {
         this.idUnidadM = idUnidadM;
     }
 
+    public int getPresxe() {
+        return presxe;
+    }
+
+    public void setPresxe(int presxe) {
+        this.presxe = presxe;
+    }
+
+    public String getUndpxc() {
+        return undpxc;
+    }
+
+    public void setUndpxc(String undpxc) {
+        this.undpxc = undpxc;
+    }
+
     public String getIdEmpaque() {
         return idEmpaque;
     }
@@ -119,10 +131,17 @@ public class CEProducto {
         this.unidad = unidad;
     }
 
+    public String getImagProd() {
+        return imagProd;
+    }
+
+    public void setImagProd(String imagProd) {
+        this.imagProd = imagProd;
+    }
+
     @Override
     public String toString() {
-        return "CEProducto{" + "idProducto=" + idProducto + ", nombProd=" + nombProd + ", descProd=" + descProd + ", idCategoria=" + idCategoria + ", idSabor=" + idSabor + ", idMarca=" + idMarca + ", pesoProd=" + pesoProd + ", idUnidadM=" + idUnidadM + ", idEmpaque=" + idEmpaque + ", unidad=" + unidad + ", imagProd=" + imagProd + '}';
+        return "CEProducto{" + "idProducto=" + idProducto + ", nombProd=" + nombProd + ", descProd=" + descProd + ", idCategoria=" + idCategoria + ", idSabor=" + idSabor + ", idMarca=" + idMarca + ", pesoProd=" + pesoProd + ", idUnidadM=" + idUnidadM + ", presxe=" + presxe + ", undpxc=" + undpxc + ", idEmpaque=" + idEmpaque + ", unidad=" + unidad + ", imagProd=" + imagProd + '}';
     }
-    
-    
+
 }
