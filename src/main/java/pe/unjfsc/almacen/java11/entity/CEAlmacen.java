@@ -1,28 +1,17 @@
-
 package pe.unjfsc.almacen.java11.entity;
 
 public class CEAlmacen {
-    
-   private String idAlmacen;
-   private String nombAlm;
-   private String idTransaccion;
-   private String idUbicacion;
+
+    private String idAlmacen;
+    private String nombAlm;
+    private String idUbicacion;
 
     public CEAlmacen() {
     }
 
-    public CEAlmacen(String idAlmacen, String nombAlm, String idTransaccion, String idUbicacion) {
+    public CEAlmacen(String idAlmacen, String nombAlm, String idUbicacion) {
         this.idAlmacen = idAlmacen;
         this.nombAlm = nombAlm;
-        this.idTransaccion = idTransaccion;
-        this.idUbicacion = idUbicacion;
-    }
-
-    public String getIdUbicacion() {
-        return idUbicacion;
-    }
-
-    public void setIdUbicacion(String idUbicacion) {
         this.idUbicacion = idUbicacion;
     }
 
@@ -42,19 +31,17 @@ public class CEAlmacen {
         this.nombAlm = nombAlm;
     }
 
-    public String getIdTransaccion() {
-        return idTransaccion;
+    public String getIdUbicacion() {
+        return idUbicacion;
     }
 
-    public void setIdTransaccion(String idTransaccion) {
-        this.idTransaccion = idTransaccion;
+    public void setIdUbicacion(String idUbicacion) {
+        this.idUbicacion = idUbicacion;
     }
 
     @Override
     public String toString() {
-        return "CEAlmacen{" + "idAlmacen=" + idAlmacen + ", nombAlm=" + nombAlm + ", idTransaccion=" + idTransaccion + ", idUbicacion=" + idUbicacion + '}';
+        return "CEAlmacen{" + "idAlmacen=" + idAlmacen + ", nombAlm=" + nombAlm + ", idUbicacion=" + idUbicacion + '}';
     }
-   
-   
-    
+
 }
