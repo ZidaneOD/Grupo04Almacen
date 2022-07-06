@@ -3,8 +3,8 @@ package pe.unjfsc.almacen.java11.view;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.almacen.java11.entity1.CETrazabilidadProducto;
-import pe.unjfsc.almacen.java11.model.CICambioTrazabilidad;
-import pe.unjfsc.almacen.java11.model.imp.CMCambioTrazabilidadHashSet;
+import pe.unjfsc.almacen.java11.modela1.CICambioTrazabilidad;
+import pe.unjfsc.almacen.java11.modela1.imp.CMCambioTrazabilidadHashSet;
 
 public class CVTrazabilidadProducto {
 

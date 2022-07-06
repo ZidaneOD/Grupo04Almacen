@@ -1,5 +1,5 @@
 
-package pe.unjfsc.almacen.java11.logical;
+package pe.unjfsc.almacen.java11.logical1;
 
 import java.util.HashSet;
 

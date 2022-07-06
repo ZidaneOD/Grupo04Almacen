@@ -11,9 +11,9 @@ import javax.swing.table.DefaultTableModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.almacen.java11.entity1.CEDetalleProducto;
-import pe.unjfsc.almacen.java11.logical.CLVariacionDProducto;
-import pe.unjfsc.almacen.java11.model.CICambioDProducto;
-import pe.unjfsc.almacen.java11.model.imp.CMCambioDProductoHashSet;
+import pe.unjfsc.almacen.java11.logical1.CLVariacionDProducto;
+import pe.unjfsc.almacen.java11.modela1.CICambioDProducto;
+import pe.unjfsc.almacen.java11.modela1.imp.CMCambioDProductoHashSet;
 
 public class JFrameMostrarDProducto extends javax.swing.JFrame {
 

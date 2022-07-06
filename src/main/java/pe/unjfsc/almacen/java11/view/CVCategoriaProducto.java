@@ -3,8 +3,8 @@ package pe.unjfsc.almacen.java11.view;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.almacen.java11.entity1.CECategoria_Producto;
-import pe.unjfsc.almacen.java11.model.CICambioCategoria;
-import pe.unjfsc.almacen.java11.model.imp.CMCambioCategoriaHashSet;
+import pe.unjfsc.almacen.java11.modela1.CICambioCategoria;
+import pe.unjfsc.almacen.java11.modela1.imp.CMCambioCategoriaHashSet;
 
 public class CVCategoriaProducto {
     

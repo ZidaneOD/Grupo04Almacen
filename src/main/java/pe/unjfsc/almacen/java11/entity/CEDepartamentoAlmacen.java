@@ -2,14 +2,14 @@ package pe.unjfsc.almacen.java11.entity;
 
 public class CEDepartamentoAlmacen {
 
-    private String idDistrito;
+    private String idDepartamento;
     private String nombDepa;
 
     public CEDepartamentoAlmacen() {
     }
 
-    public CEDepartamentoAlmacen(String idDistrito, String nombDepa) {
-        this.idDistrito = idDistrito;
+    public CEDepartamentoAlmacen(String idDepartamento, String nombDepa) {
+        this.idDepartamento = idDepartamento;
         this.nombDepa = nombDepa;
     }
 
@@ -21,17 +21,17 @@ public class CEDepartamentoAlmacen {
         this.nombDepa = nombDepa;
     }
 
-    public String getIdDistrito() {
-        return idDistrito;
+    public String getidDepartamento() {
+        return idDepartamento;
     }
 
-    public void setIdDistrito(String idDistrito) {
-        this.idDistrito = idDistrito;
+    public void setidDepartamento(String idDepartamento) {
+        this.idDepartamento = idDepartamento;
     }
 
     @Override
     public String toString() {
-        return "CEDepartamentoAlmacen{" + "idDistrito=" + idDistrito + ", nombDepa=" + nombDepa + '}';
+        return "CEDepartamentoAlmacen{" + "idDepartamento=" + idDepartamento + ", nombDepa=" + nombDepa + '}';
     }
 
 }

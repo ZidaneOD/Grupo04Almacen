@@ -1,5 +1,5 @@
 
-package pe.unjfsc.almacen.java11.model;
+package pe.unjfsc.almacen.java11.modela1;
 
 import java.util.HashSet;
 

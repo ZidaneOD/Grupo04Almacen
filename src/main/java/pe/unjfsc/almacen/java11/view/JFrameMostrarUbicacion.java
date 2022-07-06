@@ -6,9 +6,9 @@ import javax.swing.table.DefaultTableModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.almacen.java11.entity1.CEUbicacion_Almacen;
-import pe.unjfsc.almacen.java11.logical.CLVariacionUbicacion;
-import pe.unjfsc.almacen.java11.model.CICambioUbicacion;
-import pe.unjfsc.almacen.java11.model.imp.CMCambioUbicacionHashSet;
+import pe.unjfsc.almacen.java11.logical1.CLVariacionUbicacion;
+import pe.unjfsc.almacen.java11.modela1.CICambioUbicacion;
+import pe.unjfsc.almacen.java11.modela1.imp.CMCambioUbicacionHashSet;
 
 public class JFrameMostrarUbicacion extends javax.swing.JFrame {
 

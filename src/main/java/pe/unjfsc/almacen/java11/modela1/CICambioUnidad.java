@@ -1,4 +1,4 @@
-package pe.unjfsc.almacen.java11.model;
+package pe.unjfsc.almacen.java11.modela1;
 
 import java.util.HashSet;
 import pe.unjfsc.almacen.java11.entity1.CEUnidadProducto;

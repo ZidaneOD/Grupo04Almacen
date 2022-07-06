@@ -5,9 +5,9 @@ import javax.swing.table.DefaultTableModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.almacen.java11.entity1.CEEmpleadoProducto;
-import pe.unjfsc.almacen.java11.logical.CLVariacionEmpleado;
-import pe.unjfsc.almacen.java11.model.CICambioEmpleado;
-import pe.unjfsc.almacen.java11.model.imp.CMCambiarEmpleadoHashSet;
+import pe.unjfsc.almacen.java11.logical1.CLVariacionEmpleado;
+import pe.unjfsc.almacen.java11.modela1.CICambioEmpleado;
+import pe.unjfsc.almacen.java11.modela1.imp.CMCambiarEmpleadoHashSet;
 
 
 public class JFrameMostrarEmpleado extends javax.swing.JFrame {
@@ -37,7 +37,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
     }
 
     private Object[][] loadData() {
-        oCIEmpleado = oCMEmpleado;
+       //error -- oCIEmpleado = oCMEmpleado;
         oHsData = oCIEmpleado.consultAllEmpleadoCIC();
 
         CLVariacionEmpleado OlogicaEmpleado = new CLVariacionEmpleado();
@@ -371,7 +371,7 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
             if (!jTxtCodEmpleado.getText().isEmpty()) {
                 if (op == JOptionPane.YES_OPTION) {
 
-                    oCMEmpleado.eliminarEmpleadoCIC(jTxtCodEmpleado.getText());
+                  //error --  oCMEmpleado.eliminarEmpleadoCIC(jTxtCodEmpleado.getText());
                     limpiarControles();
                     JOptionPane.showMessageDialog(rootPane, "Registro borrado");
                     mostrarDatos();
@@ -415,10 +415,10 @@ public class JFrameMostrarEmpleado extends javax.swing.JFrame {
             oEmpleado.setTelfEmp(jTextTelefono.getText());
 
             if (sw) {
-                oCMEmpleado.saveEmpleadoCIC(oEmpleado);
+                //error --oCMEmpleado.saveEmpleadoCIC(oEmpleado);
                 LOG.info("[FSI] Dato Grabado : {}");
             } else {
-                oCMEmpleado.modificarEmpleadoCIC(jTxtCodEmpleado.getText(), jTextNombre.getText(), jTexApPaterno.getText(), jTexApMaterno.getText(), jTextDni.getText(), jTextTelefono.getText());
+               //error -- oCMEmpleado.modificarEmpleadoCIC(jTxtCodEmpleado.getText(), jTextNombre.getText(), jTexApPaterno.getText(), jTexApMaterno.getText(), jTextDni.getText(), jTextTelefono.getText());
                 LOG.info("[FSI] Dato Editado : {}");
             }
 

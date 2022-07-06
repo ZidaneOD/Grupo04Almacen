@@ -1,11 +1,11 @@
-package pe.unjfsc.almacen.java11.model.imp;
+package pe.unjfsc.almacen.java11.modela1.imp;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.almacen.java11.entity1.CEUnidadProducto;
-import pe.unjfsc.almacen.java11.model.CICambioUnidad;
+import pe.unjfsc.almacen.java11.modela1.CICambioUnidad;
 
 public class CMCambioUnidadHashSet implements CICambioUnidad {
 

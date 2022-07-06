@@ -1,11 +1,11 @@
-package pe.unjfsc.almacen.java11.model.imp;
+package pe.unjfsc.almacen.java11.modela1.imp;
 
 import java.util.HashSet;
 import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.almacen.java11.entity1.CEPuestoAlmacen;
-import pe.unjfsc.almacen.java11.model.CICambioPuesto;
+import pe.unjfsc.almacen.java11.modela1.CICambioPuesto;
 
 public class CMCambiarPuestoHashSet implements CICambioPuesto {
 
