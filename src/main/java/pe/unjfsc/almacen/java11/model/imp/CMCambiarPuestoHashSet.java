@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CEPuestoAlmacen;
+import pe.unjfsc.almacen.java11.entity1.CEPuestoAlmacen;
 import pe.unjfsc.almacen.java11.model.CICambioPuesto;
 
 public class CMCambiarPuestoHashSet implements CICambioPuesto {

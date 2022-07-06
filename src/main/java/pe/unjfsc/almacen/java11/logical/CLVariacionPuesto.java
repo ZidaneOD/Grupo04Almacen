@@ -3,7 +3,7 @@ package pe.unjfsc.almacen.java11.logical;
 
 import java.util.HashSet;
 
-import pe.unjfsc.almacen.java11.entity.CEPuestoAlmacen;
+import pe.unjfsc.almacen.java11.entity1.CEPuestoAlmacen;
 
 public class CLVariacionPuesto {
       public Object[][] convertHashSetArray(HashSet<CEPuestoAlmacen> poHsData) {

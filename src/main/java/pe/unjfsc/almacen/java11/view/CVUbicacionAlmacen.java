@@ -2,7 +2,7 @@ package pe.unjfsc.almacen.java11.view;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CEUbicacionAlmacen;
+import pe.unjfsc.almacen.java11.entity1.CEUbicacion_Almacen;
 import pe.unjfsc.almacen.java11.model.CICambioUbicacion;
 import pe.unjfsc.almacen.java11.model.imp.CMCambioUbicacionHashSet;
 
@@ -13,7 +13,7 @@ public class CVUbicacionAlmacen {
     public void agregar(String id, String nomb, String direc) {
         CICambioUbicacion oCrud = new CMCambioUbicacionHashSet();
         LOG.info("[FSI] Creado objeto de collection : {} ", oCrud);
-        CEUbicacionAlmacen oUbicacion = new CEUbicacionAlmacen();
+        CEUbicacion_Almacen oUbicacion = new CEUbicacion_Almacen();
         oUbicacion.setCodiUbic(id);
         oUbicacion.setNombUbic(nomb);
         oUbicacion.setDirecUbic(direc);

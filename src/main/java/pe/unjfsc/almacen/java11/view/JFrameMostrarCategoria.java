@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CECategoriaProducto;
+import pe.unjfsc.almacen.java11.entity1.CECategoria_Producto;
 import pe.unjfsc.almacen.java11.logical.CLVariacionCategoria;
 import pe.unjfsc.almacen.java11.model.CICambioCategoria;
 import pe.unjfsc.almacen.java11.model.imp.CMCambioCategoriaHashSet;
@@ -19,15 +19,15 @@ public class JFrameMostrarCategoria extends javax.swing.JFrame {
 
     private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarCategoria");
 
-    private HashSet<CECategoriaProducto> oHsData;
+    private HashSet<CECategoria_Producto> oHsData;
     private CICambioCategoria oCICategoria;
-    CECategoriaProducto oCategoria;
+    CECategoria_Producto oCategoria;
     CMCambioCategoriaHashSet oCMCategoria;
     boolean sw;
 
     public JFrameMostrarCategoria() {
         oCMCategoria = new CMCambioCategoriaHashSet();
-        oCategoria = new CECategoriaProducto();
+        oCategoria = new CECategoria_Producto();
 
         initComponents();
         setSize(619, 513);

@@ -3,7 +3,7 @@ package pe.unjfsc.almacen.java11.model;
 
 import java.util.HashSet;
 
-import pe.unjfsc.almacen.java11.entity.CEPuestoAlmacen;
+import pe.unjfsc.almacen.java11.entity1.CEPuestoAlmacen;
 
 public interface CICambioPuesto {
     public void savePuestoCIC(CEPuestoAlmacen poData);

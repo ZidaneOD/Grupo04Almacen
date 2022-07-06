@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CEPuestoAlmacen;
+import pe.unjfsc.almacen.java11.entity1.CEPuestoAlmacen;
 import pe.unjfsc.almacen.java11.logical.CLVariacionPuesto;
 import pe.unjfsc.almacen.java11.model.CICambioPuesto;
 import pe.unjfsc.almacen.java11.model.imp.CMCambiarPuestoHashSet;

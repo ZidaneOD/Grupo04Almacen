@@ -2,7 +2,7 @@ package pe.unjfsc.almacen.java11.view;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CEEmpleadoProducto;
+import pe.unjfsc.almacen.java11.entity1.CEEmpleadoProducto;
 import pe.unjfsc.almacen.java11.model.CICambioEmpleado;
 import pe.unjfsc.almacen.java11.model.imp.CMCambiarEmpleadoHashSet;
 

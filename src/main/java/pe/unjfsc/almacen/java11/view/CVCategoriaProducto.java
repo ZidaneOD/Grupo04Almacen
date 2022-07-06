@@ -2,7 +2,7 @@ package pe.unjfsc.almacen.java11.view;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CECategoriaProducto;
+import pe.unjfsc.almacen.java11.entity1.CECategoria_Producto;
 import pe.unjfsc.almacen.java11.model.CICambioCategoria;
 import pe.unjfsc.almacen.java11.model.imp.CMCambioCategoriaHashSet;
 
@@ -13,7 +13,7 @@ public class CVCategoriaProducto {
     public void agregar(String a, String b) {
         CICambioCategoria oCrud = new CMCambioCategoriaHashSet();
         LOG.info("[FSI] Creado objeto de collection : {} ", oCrud);
-        CECategoriaProducto oCategoria = new CECategoriaProducto();
+        CECategoria_Producto oCategoria = new CECategoria_Producto();
         oCategoria.setCodiCate(a);
         oCategoria.setNombCate(b);
         

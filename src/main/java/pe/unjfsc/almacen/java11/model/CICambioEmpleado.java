@@ -1,7 +1,7 @@
 package pe.unjfsc.almacen.java11.model;
 
 import java.util.HashSet;
-import pe.unjfsc.almacen.java11.entity.CEEmpleadoProducto;
+import pe.unjfsc.almacen.java11.entity1.CEEmpleadoProducto;
 
 public interface CICambioEmpleado {
 

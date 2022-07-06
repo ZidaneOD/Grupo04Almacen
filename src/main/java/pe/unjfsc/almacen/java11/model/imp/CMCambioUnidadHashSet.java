@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CEUnidadProducto;
+import pe.unjfsc.almacen.java11.entity1.CEUnidadProducto;
 import pe.unjfsc.almacen.java11.model.CICambioUnidad;
 
 public class CMCambioUnidadHashSet implements CICambioUnidad {

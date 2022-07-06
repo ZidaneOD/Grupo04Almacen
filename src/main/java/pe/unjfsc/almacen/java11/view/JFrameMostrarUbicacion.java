@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CEUbicacionAlmacen;
+import pe.unjfsc.almacen.java11.entity1.CEUbicacion_Almacen;
 import pe.unjfsc.almacen.java11.logical.CLVariacionUbicacion;
 import pe.unjfsc.almacen.java11.model.CICambioUbicacion;
 import pe.unjfsc.almacen.java11.model.imp.CMCambioUbicacionHashSet;
@@ -13,15 +13,15 @@ import pe.unjfsc.almacen.java11.model.imp.CMCambioUbicacionHashSet;
 public class JFrameMostrarUbicacion extends javax.swing.JFrame {
 
     private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarUbicacion");
-    private HashSet<CEUbicacionAlmacen> oHsData;
+    private HashSet<CEUbicacion_Almacen> oHsData;
     private CICambioUbicacion oCIUbic;
-    CEUbicacionAlmacen oUbicacion;
+    CEUbicacion_Almacen oUbicacion;
     CMCambioUbicacionHashSet oCMUbic;
     boolean sw;
 
     public JFrameMostrarUbicacion() {
         oCMUbic = new CMCambioUbicacionHashSet();
-        oUbicacion = new CEUbicacionAlmacen();
+        oUbicacion = new CEUbicacion_Almacen();
         initComponents();
 
         setSize(545, 453);

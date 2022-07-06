@@ -1,4 +1,4 @@
-package pe.unjfsc.almacen.java11.entity;
+package pe.unjfsc.almacen.java11.entity1;
 
 public class CEUnidadProducto {
 

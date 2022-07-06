@@ -1,7 +1,7 @@
 package pe.unjfsc.almacen.java11.logical;
 
 import java.util.HashSet;
-import pe.unjfsc.almacen.java11.entity.CEDetalleProducto;
+import pe.unjfsc.almacen.java11.entity1.CEDetalleProducto;
 
 public class CLVariacionDProducto {
 

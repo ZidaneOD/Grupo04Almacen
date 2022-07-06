@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pe.unjfsc.almacen.java11.entity.CETrazabilidadProducto;
+import pe.unjfsc.almacen.java11.entity1.CETrazabilidadProducto;
 import pe.unjfsc.almacen.java11.logical.CLVariaciontTrazabilidad;
 import pe.unjfsc.almacen.java11.model.CICambioTrazabilidad;
 import pe.unjfsc.almacen.java11.model.imp.CMCambioTrazabilidadHashSet;

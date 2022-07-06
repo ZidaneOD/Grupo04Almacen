@@ -2,25 +2,33 @@ package pe.unjfsc.almacen.java11.entity;
 
 public class CEUbicacionAlmacen {
 
-    private String codiUbic;
+    private String idUbicacion;
     private String nombUbic;
-    private String direcUbic;
+    private String idDistrito;
 
     public CEUbicacionAlmacen() {
     }
 
-    public CEUbicacionAlmacen(String codiUbic, String nombUbic, String direcUbic) {
-        this.codiUbic = codiUbic;
+    public CEUbicacionAlmacen(String idUbicacion, String nombUbic, String idDistrito) {
+        this.idUbicacion = idUbicacion;
         this.nombUbic = nombUbic;
-        this.direcUbic = direcUbic;
+        this.idDistrito = idDistrito;
     }
 
-    public String getCodiUbic() {
-        return codiUbic;
+    public String getIdDistrito() {
+        return idDistrito;
     }
 
-    public void setCodiUbic(String codiUbic) {
-        this.codiUbic = codiUbic;
+    public void setIdDistrito(String idDistrito) {
+        this.idDistrito = idDistrito;
+    }
+
+    public String getIdUbicacion() {
+        return idUbicacion;
+    }
+
+    public void setIdUbicacion(String idUbicacion) {
+        this.idUbicacion = idUbicacion;
     }
 
     public String getNombUbic() {
@@ -31,17 +39,9 @@ public class CEUbicacionAlmacen {
         this.nombUbic = nombUbic;
     }
 
-    public String getDirecUbic() {
-        return direcUbic;
-    }
-
-    public void setDirecUbic(String direcUbic) {
-        this.direcUbic = direcUbic;
-    }
-
     @Override
     public String toString() {
-        return "CEUbicacionAlmacen{" + "codiUbic=" + codiUbic + ", nombUbic=" + nombUbic + ", direcUbic=" + direcUbic + '}';
+        return "CEUbicacionProducto{" + "idUbicacion=" + idUbicacion + ", nombUbic=" + nombUbic + ", idDistrito=" + idDistrito + '}';
     }
 
 }
